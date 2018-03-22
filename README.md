@@ -1,14 +1,14 @@
-# A Blank PhoneGap App
-
+# Mox
+ 
+Made by Zuyd Students
 ## Usage
 
 ### PhoneGap CLI
 
-    $ phonegap create my-app --template blank
 
 ### Desktop
 
 In your browser, open the file:
 
-    /www/index.html
+    localhost:3000
 
