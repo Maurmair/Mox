@@ -9,9 +9,10 @@
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css.css" />
         <script>
-
+            /* herschrijven naar jquery*/
             window.onload = function(){
-                document.getElementById('goToLocationServiceScreenBtn').addEventListener('click', navLocationScreen);
+                $("#goToLocationServiceScreenBtn").click(function (){$.mobile.changePage("#locationScreen");});
+                // document.getElementById('goToLocationServiceScreenBtn').addEventListener('click', navLocationScreen);
                 document.getElementById('goToBTScreen').addEventListener('click', navBTScreen);
                 document.getElementById('goToKoppelMoxScreen').addEventListener('click', navKoppelScreen);
                 document.getElementById('goToProfielScreen').addEventListener('click', navProfielScreen);
