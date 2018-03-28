@@ -9,18 +9,16 @@
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css.css" />
         <script>
-            /* herschrijven naar jquery*/
             window.onload = function(){
                 $("#goToLocationServiceScreenBtn").click(function (){$.mobile.changePage("#locationScreen");});
-                // document.getElementById('goToLocationServiceScreenBtn').addEventListener('click', navLocationScreen);
-                document.getElementById('goToBTScreen').addEventListener('click', navBTScreen);
-                document.getElementById('goToKoppelMoxScreen').addEventListener('click', navKoppelScreen);
-                document.getElementById('goToProfielScreen').addEventListener('click', navProfielScreen);
-                document.getElementById('goToDoelScreen').addEventListener('click', navDoelScreen);
-                document.getElementById('goToActieveMinScreen').addEventListener('click', navActieveMinScreen);
-                document.getElementById('goToStappenScreen').addEventListener('click', navAantalStappen);
-                document.getElementById('goToInstellingenScreen').addEventListener('click', navInstellingenScreen);
-                document.getElementById('homeBtn').addEventListener('click', navHome);                
+                $("#goToBTScreen").click(function (){$.mobile.changePage("#btScreen");});
+                $("#goToKoppelMoxScreen").click(function (){$.mobile.changePage("#koppelMoxScreen");});
+                $("#goToProfielScreen").click(function (){$.mobile.changePage("#profielScreen");});
+                $("#goToDoelScreen").click(function (){$.mobile.changePage("#doelScreen");});
+                $("#goToActieveMinScreen").click(function (){$.mobile.changePage("#activeMinScreen");});
+                $("#goToStappenScreen").click(function (){$.mobile.changePage("#aantalStappenScreen");});
+                $("#goToInstellingenScreen").click(function (){$.mobile.changePage("#instellingenScreen");});
+                $("#homeBtn").click(function (){$.mobile.changePage("#home");});       
             }
             
             function navHome(){$.mobile.changePage("#home","fade");}
@@ -55,11 +53,13 @@
                         </div>                        
                     </div>
                     <div data-role="footer">
-                        <button data-icon="home" id="homeBtn" onclick="location.href='index.html'"/>
-                        <button data-icon="arrow-r" id="goToLocationServiceScreenBtn"/>
+                        <a href="goToInstellingenScreen" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Vorige</a>
+                        <a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a>
+                        <a id="goToInstellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+                        
                     </div>
                 </div>
-
+ 
                 <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
                 <div data-role="page" id="locationScreen">
                     <div data-role="content">

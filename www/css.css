@@ -1,4 +1,2 @@
-[data-role=page]{height: 100% !important; position:relative !important;}
-[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
-[data-icon="arrow-r"]{float: right; background-color: #e9e9e9;}
-[data-icon="home"]{background-color: #e9e9e9;}
+[data-role=page]{height: 100% !important; position:relative !important; text-align: center }
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center} 
