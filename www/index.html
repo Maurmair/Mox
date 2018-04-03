@@ -8,162 +8,116 @@
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css.css" />
-        <script>
-            window.onload = function(){
-                $("#goToLocationServiceScreenBtn").click(function (){$.mobile.changePage("#locationScreen");});
-                $("#goToBTScreen").click(function (){$.mobile.changePage("#btScreen");});
-                $("#goToKoppelMoxScreen").click(function (){$.mobile.changePage("#koppelMoxScreen");});
-                $("#goToProfielScreen").click(function (){$.mobile.changePage("#profielScreen");});
-                $("#goToDoelScreen").click(function (){$.mobile.changePage("#doelScreen");});
-                $("#goToActieveMinScreen").click(function (){$.mobile.changePage("#activeMinScreen");});
-                $("#goToStappenScreen").click(function (){$.mobile.changePage("#aantalStappenScreen");});
-                $("#goToInstellingenScreen").click(function (){$.mobile.changePage("#instellingenScreen");});
-                $("#homeBtn").click(function (){$.mobile.changePage("#home");});       
-            }
-            
-            function navHome(){$.mobile.changePage("#home","fade");}
-            function navLocationScreen(){$.mobile.changePage("#locationScreen");}
-            function navBTScreen(){$.mobile.changePage("#btScreen", "fade");}
-            function navKoppelScreen(){$.mobile.changePage("#koppelMoxScreen", "fade");}
-            function navProfielScreen(){$.mobile.changePage("#profielScreen","fade");}
-            function navDoelScreen(){$.mobile.changePage("#doelScreen","fade");}
-            function navActieveMinScreen(){$.mobile.changePage("#activeMinScreen","fade");}
-            function navAantalStappen(){$.mobile.changePage("#aantalStappenScreen","fade");}
-            function navInstellingenScreen(){$.mobile.changePage("#instellingenScreen","fade");}
+        <script>         
             $(function(){setTimeout(hideSplash, 2000);});
             function hideSplash(){$.mobile.changePage("#home", "fade");}
-
         </script>
     </head>
     <body>
-            <div data-role="page" id="splash"> 
-                    <div class="splash">
-                        <!-- <img src="splash.png" alt="splash" / style="height:812px;width:375px;"> -->
-                        <div data-role="content">
-                            <h1 style="text-align: center">MOX</h1>
-                        </div>
-                    </div>
+        <div data-role="page" id="splash"> 
+            <div class="splash">
+                <!-- <img src="splash.png" alt="splash" / style="height:812px;width:375px;"> -->
+                <div data-role="content">
+                    <h1 style="text-align: center">MOX</h1>
                 </div>
+            </div>
+        </div>
 
-                <!-- ################   HOMESCREEN    ################ --> 
-                <div data-role="page" id="home"> 
-                    <div data-role="content">
-                        <div data-role="content">                             
-                            <h1>WELKOM</h1>
-                        </div>                        
-                    </div>
-                    <div data-role="footer">
-                        <a href="goToInstellingenScreen" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Vorige</a>
-                        <a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a>
-                        <a id="goToInstellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-                        
-                    </div>
+        <!-- ################   HOMESCREEN    ################ --> 
+        <div data-role="page" id="home"> 
+            <div data-role="content">
+                <div data-role="content">                             
+                    <h1>WELKOM</h1>
+                </div>                        
+            </div>
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
+
+        <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
+        <div data-role="page" id="locationScreen">
+            <div data-role="content">
+                <h1>LOCATION</h1>
+            </div>
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
+
+        <!-- ################   BLUETOOTH SCREEN    ################ -->
+        <div data-role="page" id="btScreen">
+                <div data-role="content">
+                    <h1>BLUETOOTH</h1>
                 </div>
- 
-                <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
-                <div data-role="page" id="locationScreen">
-                    <div data-role="content">
-                        <h1>LOCATION</h1>
-                    </div>
-                    <div data-role="footer">
-                        <button data-icon="home" onclick="location.href='index.html#home'" />
-                        <button data-icon="arrow-r" id="goToBTScreen"/>
-                    </div>
+                <div data-role="footer">
+                    <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                    <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                    <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
                 </div>
+        </div>
 
-                <!-- ################   BLUETOOTH SCREEN    ################ -->
-                <div data-role="page" id="btScreen">
-                        <div data-role="content">
-                            <h1>BLUETOOTH</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToKoppelMoxScreen"/>
-                        </div>
-                </div>
-
-                <!-- ################   KOPPELEN MOX SCREEN    ################ -->
-                <!-- ################   TODO:                  ################ -->
-                <!-- ################   * Bevestiging laten    ################ -->
-                <!-- ################     wanneer er gekoppeld ################ -->
-                <!-- ################     is                   ################ -->                
-                <div data-role="page" id="koppelMoxScreen">
-                        <div data-role="content">
-                            <h1>Selecteer mox:</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToProfielScreen"/>
-                        </div>
-                </div>
-                
-                <!-- ################   PROFIEL SCREEN    ################ -->
-                <div data-role="page" id="profielScreen">
-                        <div data-role="content">
-                            <h1>PROFIEL</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToDoelScreen"/>
-                        </div>
-                </div>
+        <!-- ################   KOPPELEN MOX SCREEN    ################ -->
+        <!-- ################   TODO:                  ################ -->
+        <!-- ################   * Bevestiging laten    ################ -->
+        <!-- ################     wanneer er gekoppeld ################ -->
+        <!-- ################     is                   ################ -->                
+        <div data-role="page" id="koppelMoxScreen">
+            <div data-role="content">
+                <h1>Selecteer mox:</h1>
+            </div>
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
 
 
-                <!-- ################   DOEL SCREEN    ################ -->
-                <div data-role="page" id="doelScreen">
-                        <div data-role="content">
-                            <h1>DOEL</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToActieveMinScreen"/>
-                        </div>
-                </div>
-
-                <!-- ################   ACTIEVE MIN SCREEN    ################ -->
-                <div data-role="page" id="activeMinScreen">
-                        <div data-role="content">
-                            <h1>ACTIEVE MIN</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToStappenScreen"/>
-                        </div>
-                </div>
+        <!-- ################   ACTIEVE MIN SCREEN    ################ -->
+        <div data-role="page" id="actieveMinutenScreen">
+            <div data-role="content">
+                <h1>ACTIEVE MIN</h1>
+            </div>
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
 
 
-                <!-- ################   STAPPEN SCREEN    ################ -->
-                <div data-role="page" id="aantalStappenScreen">
-                        <div data-role="content">
-                            <h1>AANTAL STAPPEN</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="goToInstellingenScreen"/>
-                        </div>
-                </div>
+        <!-- ################   STAPPEN SCREEN    ################ -->
+        <div data-role="page" id="aantalStappenScreen">
+            <div data-role="content">
+                <h1>AANTAL STAPPEN</h1>
+            </div>
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
 
-                <!-- ################   INSTELLINGEN SCREEN    ################ -->
-                <div data-role="page" id="instellingenScreen">
-                        <div data-role="content">
-                            <h1>INSTELLINGEN</h1>
-                        </div>
-                        <div data-role="footer">
-                            <button data-icon="home" onclick="location.href='index.html#home'" />
-                            <button data-icon="arrow-r" id="myBtn2"/>
-                        </div>
-                </div>
+        <!-- ################   INSTELLINGEN SCREEN    ################ -->
+        <div data-role="page" id="instellingenScreen">
+            <div data-role="content">
+                <h1>INSTELLINGEN</h1>
+            </div>
+            <div data-role="body-instellingen">
+                <>INSTELLINGEN</h1>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
+            <div data-role="footer">
+                <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
+                <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
+                <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            </div>
+        </div>
         <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
