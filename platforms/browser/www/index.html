@@ -16,7 +16,7 @@
     <body>
         <div data-role="page" id="splash"> 
             <div class="splash">
-                <!-- <img src="splash.png" alt="splash" / style="height:812px;width:375px;"> -->
+                <img src="splash.png" alt="splash">
                 <div data-role="content">
                     <h1 style="text-align: center">MOX</h1>
                 </div>
@@ -42,6 +42,17 @@
             <div data-role="content">
                 <h1>LOCATION</h1>
             </div>
+            <form>
+                <label for="flip-1">Flip toggle switch:</label>
+                <select name="flip-1" id="flip-1" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </form>
+
+            <div>
+                    <a href="#btScreen" data-role="button">Volgende</a>
+            </div>
             <div data-role="footer">
                 <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
                 <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
@@ -53,6 +64,9 @@
         <div data-role="page" id="btScreen">
                 <div data-role="content">
                     <h1>BLUETOOTH</h1>
+                </div>
+                <div>
+                    <a href="#koppelMoxScreen" data-role="button">Volgende</a>
                 </div>
                 <div data-role="footer">
                     <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -70,13 +84,15 @@
             <div data-role="content">
                 <h1>Selecteer mox:</h1>
             </div>
+            <div>
+                <a href="#actieveMinutenScreen" data-role="button">Afronden</a>
+            </div>
             <div data-role="footer">
                 <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
                 <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
                 <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
             </div>
         </div>
-
 
         <!-- ################   ACTIEVE MIN SCREEN    ################ -->
         <div data-role="page" id="actieveMinutenScreen">
@@ -89,7 +105,6 @@
                 <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
             </div>
         </div>
-
 
         <!-- ################   STAPPEN SCREEN    ################ -->
         <div data-role="page" id="aantalStappenScreen">
@@ -108,6 +123,11 @@
             <div data-role="content">
                 <h1>INSTELLINGEN</h1>
             </div>
+            <div data-role="body-instellingen">
+                <h3>INSTELLINGEN</h3>
+                <a href="#locationScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Initialiseer MOX</a>
+            </div>
+
             <div data-role="footer">
                 <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
                 <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
