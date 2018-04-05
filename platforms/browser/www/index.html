@@ -8,15 +8,17 @@
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css.css" />
-        <script>         
+        <script>  
+            
             $(function(){setTimeout(hideSplash, 2000);});
             function hideSplash(){$.mobile.changePage("#home", "fade");}
+            
         </script>
     </head>
-    <body>
+    <body>    
         <div data-role="page" id="splash"> 
             <div class="splash">
-                <img src="splash.png" alt="splash">
+                <!-- <img src="splash.png" alt="splash" / style="height:812px;width:375px;"> -->
                 <div data-role="content">
                     <h1 style="text-align: center">MOX</h1>
                 </div>
@@ -25,9 +27,39 @@
 
         <!-- ################   HOMESCREEN    ################ --> 
         <div data-role="page" id="home"> 
+             <script>
+             var request = new XMLHttpRequest();
+            request.addEventListener("readystatechange", processRequest, false);
+            request.open('GET', "http://localhost:61497/api/Device", true);
+            // request.setRequestHeader("APIKey", "");
+            request.setRequestHeader("Authorization", "Basic " + btoa("maurmair_moxAdm"+":" + "RandomPw!"));
+
+            request.send();
+            function processRequest(e){
+                if (request.readyState == 4 && request.status == 200) {
+                    var response = JSON.parse(request.responseText);
+                    if (response.length > 0) {
+                        for (var i = 0; i < response.length; i++){
+                            printObject(response[i]);
+                        }
+                    }
+                }
+            }
+
+            function printObject(jsonObject){
+                $("#testapi ul").append("<li>Device Naam: " +jsonObject.DeviceId + "</li>");
+                $("#testapi ul").append("<li>Coupled Device: " + jsonObject.CoupledDevice + "</li>");
+            }
+            
+            </script> 
             <div data-role="content">
                 <div data-role="content">                             
                     <h1>WELKOM</h1>
+                    <div id="testapi">
+                            <ul>
+
+                            </ul>
+                    </div>                    
                 </div>                        
             </div>
             <div data-role="footer">
@@ -42,17 +74,6 @@
             <div data-role="content">
                 <h1>LOCATION</h1>
             </div>
-            <form>
-                <label for="flip-1">Flip toggle switch:</label>
-                <select name="flip-1" id="flip-1" data-role="slider">
-                    <option value="off">Off</option>
-                    <option value="on">On</option>
-                </select>
-            </form>
-
-            <div>
-                    <a href="#btScreen" data-role="button">Volgende</a>
-            </div>
             <div data-role="footer">
                 <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
                 <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
@@ -64,9 +85,6 @@
         <div data-role="page" id="btScreen">
                 <div data-role="content">
                     <h1>BLUETOOTH</h1>
-                </div>
-                <div>
-                    <a href="#koppelMoxScreen" data-role="button">Volgende</a>
                 </div>
                 <div data-role="footer">
                     <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -84,15 +102,13 @@
             <div data-role="content">
                 <h1>Selecteer mox:</h1>
             </div>
-            <div>
-                <a href="#actieveMinutenScreen" data-role="button">Afronden</a>
-            </div>
             <div data-role="footer">
                 <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
                 <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
                 <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
             </div>
         </div>
+
 
         <!-- ################   ACTIEVE MIN SCREEN    ################ -->
         <div data-role="page" id="actieveMinutenScreen">
@@ -105,6 +121,7 @@
                 <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
             </div>
         </div>
+
 
         <!-- ################   STAPPEN SCREEN    ################ -->
         <div data-role="page" id="aantalStappenScreen">
@@ -124,8 +141,7 @@
                 <h1>INSTELLINGEN</h1>
             </div>
             <div data-role="body-instellingen">
-                <h3>INSTELLINGEN</h3>
-                <a href="#locationScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Initialiseer MOX</a>
+                <>INSTELLINGEN</h1>
             </div>
 
             <div data-role="footer">
@@ -134,6 +150,38 @@
                 <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
             </div>
         </div>
+        <script>
+            // $.ajax({
+            // url: 'http://localhost:61497/api/Device',
+            // datatype: 'jsonp',
+            // type: 'GET',            
+            // success: function(data) {
+            //     $("#testapi").text(data.DeviceId) ;
+            // },
+            // error: function(error) {
+            //     // alert('Status: ' + error);
+            // },            
+            // });
+            // Assign handlers immediately after making the request,
+            // and remember the jqxhr object for this request
+            // var jqxhr = $.get( "http://localhost:61497/api/Device", function(data) {
+            // alert( "success" );
+            // })
+            // .done(function(data) {
+            //     $("#testapi").text(data.DeviceId) ;
+            // })
+            // .fail(function() {
+            //     alert( "error" );
+            // })
+            // ;
+            
+            // // Perform other work here ...
+            
+            // // Set another completion function for the request above
+            // jqxhr.always(function() {
+            // alert( "second finished" );
+            // });
+        </script>
         <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
