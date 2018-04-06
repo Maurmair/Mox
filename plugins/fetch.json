@@ -1,0 +1,10 @@
+{
+  "cordova-plugin-device-name": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device-name"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

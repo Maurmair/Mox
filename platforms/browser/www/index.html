@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <link rel="stylesheet" href="css.css" />
         <script>  
             
@@ -28,33 +29,42 @@
         <!-- ################   HOMESCREEN    ################ --> 
         <div data-role="page" id="home"> 
              <script>
-             var request = new XMLHttpRequest();
-            request.addEventListener("readystatechange", processRequest, false);
-            request.open('GET', "http://localhost:61497/api/Device", true);
-            // request.setRequestHeader("APIKey", "");
-            request.setRequestHeader("Authorization", "Basic " + btoa("maurmair_moxAdm"+":" + "RandomPw!"));
+                var deviceName = cordova.plugin.device-name;
+                console.log(deviceName.name) // e.g: Becvert's iPad
+ 
+                deviceName.get(function success(name) {
+                    console.log(name);
+                }, function failure(error) {
+                    console.log(error);
+                });
+            
+                request.addEventListener("readystatechange", processRequest, false);
+                request.open('GET', "http://moxbackend20180406094815.azurewebsites.net/api/Device", true);
+                // request.setRequestHeader("APIKey", "");
+                // request.setRequestHeader("Authorization", "Basic " + btoa("maurmair_moxAdm"+":" + "RandomPw!"));
 
-            request.send();
-            function processRequest(e){
-                if (request.readyState == 4 && request.status == 200) {
-                    var response = JSON.parse(request.responseText);
-                    if (response.length > 0) {
-                        for (var i = 0; i < response.length; i++){
-                            printObject(response[i]);
+                request.send();
+                function processRequest(e){
+                    if (request.readyState == 4 && request.status == 200) {
+                        var response = JSON.parse(request.responseText);
+                        if (response.length > 0) {
+                            for (var i = 0; i < response.length; i++){
+                                printObject(response[i]);
+                            }
                         }
                     }
                 }
-            }
 
-            function printObject(jsonObject){
-                $("#testapi ul").append("<li>Device Naam: " +jsonObject.DeviceId + "</li>");
-                $("#testapi ul").append("<li>Coupled Device: " + jsonObject.CoupledDevice + "</li>");
-            }
+                function printObject(jsonObject){
+                    $("#testapi ul").append("<li>Device Naam: " +jsonObject.DeviceId + "</li>");
+                    $("#testapi ul").append("<li>Coupled Device: " + jsonObject.CoupledDevice + "</li>");
+                }
             
             </script> 
             <div data-role="content">
                 <div data-role="content">                             
                     <h1>WELKOM</h1>
+                    <div id="DeviceName"></div>
                     <div id="testapi">
                             <ul>
 
@@ -152,11 +162,11 @@
         </div>
         <script>
             // $.ajax({
-            // url: 'http://localhost:61497/api/Device',
+            // url: 'http://moxbackend20180406094815.azurewebsites.net/api/Device',
             // datatype: 'jsonp',
             // type: 'GET',            
             // success: function(data) {
-            //     $("#testapi").text(data.DeviceId) ;
+            //     $("#testapi ul").append(data.DeviceId) ;
             // },
             // error: function(error) {
             //     // alert('Status: ' + error);
@@ -182,6 +192,6 @@
             // alert( "second finished" );
             // });
         </script>
-        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script type="text/javascript" src="cordova.js"></script> -->
     </body>
 </html>
