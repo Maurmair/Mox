@@ -7,13 +7,10 @@
       "browser",
       "android"
     ],
-    "plugins": {
-      "cordova-plugin-device-name": {}
-    }
+    "plugins": {}
   },
   "dependencies": {
-    "cordova-browser": "~5.0.3",
-    "cordova-plugin-device-name": "~1.3.2",
-    "cordova-android": "~7.0.0"
+    "cordova-android": "~7.0.0",
+    "cordova-browser": "~5.0.3"
   }
 }

@@ -1,0 +1,23 @@
+[data-role=page]{height: 100% !important; position:relative !important; text-align: center; }
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center; background-color: #476aa3;} 
+[data-role=header]{background-color: #81d4fa;}
+#splash {
+    color: white;
+    text-align: center;     
+    background: radial-gradient(circle,#729ee5, #476aa3);
+    
+}
+#home{
+    color: white;
+    background: radial-gradient(circle,#729ee5, #476aa3);  
+    text-align: center;     
+
+}
+#moxtitle{
+    padding-top: 70%;
+}
+#homefooter{
+    color: white;
+    text-align: center;     
+    background: radial-gradient(circle,#729ee5, #476aa3);  
+}
