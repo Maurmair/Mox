@@ -63,7 +63,7 @@
         <div data-role="content">
             <h2>LOCATION</h2>
         </div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
@@ -75,7 +75,7 @@
         <div data-role="content">
             <h2>BLUETOOTH</h2>
         </div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
@@ -91,7 +91,7 @@
         <div data-role="content">
             <h2>Selecteer mox:</h2>
         </div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
@@ -101,13 +101,18 @@
 
     <!-- ################   ACTIEVE MIN SCREEN    ################ -->
     <div data-role="page" id="actieveMinutenScreen">
-        <div data-role="header" style="background-color: #729ee5; color: white">
+        <div data-role="header" id="header" >
+            
             <h2>
                 <b>Actieve minuten</b>
             </h2>
         </div>
-        <div data-role="content"></div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="content">
+            <p>Circle plaatsen met x van het doel behaald</p>
+            <p>Lampjes plaatsen voor % aanduiding</p>
+            <!-- <div id="circle"><h1>Hoi</h1></div> -->
+        </div>
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
@@ -117,13 +122,15 @@
 
     <!-- ################   STAPPEN SCREEN    ################ -->
     <div data-role="page" id="aantalStappenScreen">
-        <div data-role="header" style="background-color: #729ee5; color: white">
+        <div data-role="header" id="header">
             <h2><b>Aantal stappen</b></h2>
-        </div>
-        <div data-role="content">
 
         </div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="content">
+                <p>Circle plaatsen met x van het doel behaald</p>
+                <p>Lampjes plaatsen voor % aanduiding</p>
+        </div>
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
@@ -132,10 +139,22 @@
 
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
     <div data-role="page" id="instellingenScreen">
-        <div data-role="content">
-            <h2>INSTELLINGEN</h2>
+        <div data-role="header" id="header">
+            <h2><b>Instellingen</b></h2>
         </div>
-        <div data-role="footer" style="color:white; background-color: #476aa3;">
+        <div data-role="content">
+            <p style="margin-top:30%"><b>Stel uw doel in:</b></p>
+            <p style="text-align: left">Actieve minuten:
+                <button data-icon="plus" data-role="button" data-inline="true"></button>
+                <!-- <input type="number" id="actieveMinutenInput" style="width: 10%;" value="30" /> -->
+                <button data-icon="minus" data-role="button" data-inline="true"></button>
+            </p>
+            <p style="text-align: left">Aantal stappen:
+                    <button data-icon="plus" data-role="button" data-inline="true"></button>
+                    <button data-icon="minus" data-role="button" data-inline="true"></button>
+            </p>
+        </div>
+        <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
             <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>

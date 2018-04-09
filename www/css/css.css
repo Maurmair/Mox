@@ -1,6 +1,6 @@
 [data-role=page]{height: 100% !important; position:relative !important; text-align: center; }
-[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center; background-color: #476aa3;} 
-[data-role=header]{background-color: #81d4fa;}
+[data-role=header]{text-align:center;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center;} 
 #splash {
     color: white;
     text-align: center;     
@@ -21,3 +21,32 @@
     text-align: center;     
     background: radial-gradient(circle,#729ee5, #476aa3);  
 }
+
+#header{    
+    background-color: #729ee5; color: white;
+    width:100%;
+    text-align: center;    
+}
+
+#footer{
+    width:100%;
+    color:white; background-color: #476aa3;"
+}
+
+.ui-header .ui-title{
+    text-align: center;
+}
+
+#circle{
+    vertical-align: middle;
+    text-align: center;
+    background-color: #729ee5;
+    color: white;
+    border-radius: 50%;
+	width: 10em;
+	height: 10em; 
+}
+*{
+    font-weight: bold;
+}
+
