@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="./css/css.css" />
     <script>              
         $(function () { setTimeout(hideSplash, 2000); });
-        function hideSplash() { $.mobile.changePage("#home", "fade"); }
-        $(function () { setTimeout(hideWelcome, 4000); });
-        function hideWelcome() { $.mobile.changePage("#actieveMinutenScreen", "fade"); }
+        function hideSplash() { $.mobile.changePage("#instellingenScreen", "fade"); }
+        // $(function () { setTimeout(hideWelcome, 4000); });
+        // function hideWelcome() { $.mobile.changePage("#actieveMinutenScreen", "fade"); }
     </script>
 </head>
 
@@ -101,8 +101,8 @@
 
     <!-- ################   ACTIEVE MIN SCREEN    ################ -->
     <div data-role="page" id="actieveMinutenScreen">
-        <div data-role="header" id="header" >
-            
+        <div data-role="header" id="header">
+
             <h2>
                 <b>Actieve minuten</b>
             </h2>
@@ -123,12 +123,14 @@
     <!-- ################   STAPPEN SCREEN    ################ -->
     <div data-role="page" id="aantalStappenScreen">
         <div data-role="header" id="header">
-            <h2><b>Aantal stappen</b></h2>
+            <h2>
+                <b>Aantal stappen</b>
+            </h2>
 
         </div>
         <div data-role="content">
-                <p>Circle plaatsen met x van het doel behaald</p>
-                <p>Lampjes plaatsen voor % aanduiding</p>
+            <p>Circle plaatsen met x van het doel behaald</p>
+            <p>Lampjes plaatsen voor % aanduiding</p>
         </div>
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -140,19 +142,54 @@
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
     <div data-role="page" id="instellingenScreen">
         <div data-role="header" id="header">
-            <h2><b>Instellingen</b></h2>
+            <h2>
+                <b>Instellingen</b>
+            </h2>
         </div>
         <div data-role="content">
-            <p style="margin-top:30%"><b>Stel uw doel in:</b></p>
+            <fieldset data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini">
+                <div role="heading" class="ui-controlgroup-label">
+                    <legend>Actieve minuten:</legend>
+                </div>
+                <div class="ui-controlgroup-controls ">
+
+                    <button class="ui-btn ui-icon-minus ui-btn-icon-notext" data-role="button" data-inline="true"></button>
+                    <!-- <input type="number" id="actieveMinutenInput" value="30" data-mini="true"/> 
+                     -->hoi
+                    <button class="ui-btn ui-icon-plus ui-btn-icon-notext" data-role="button" data-inline="true"></button>
+                    
+                </div>
+            </fieldset>
+            
+<!-- <fieldset data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-horizontal ui-corner-all"><div role="heading" class="ui-controlgroup-label"><legend>Horizontal controlgroup, mixed:</legend></div><div class="ui-controlgroup-controls ">
+                        
+                        <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-right ui-first-child">Link</a>
+                        <button class="ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow ui-corner-all">Button</button>
+                        <label for="select-v-1e">Select</label>
+                        <div class="ui-select"><div id="select-v-1e-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow ui-last-child"><span>One</span><select name="select-v-1e" id="select-v-1e">
+                            <option value="#">One</option>
+                            <option value="#">Two</option>
+                            <option value="#">Three</option>
+                        </select></div></div>
+                    </div></fieldset>-->
+
+
+                    <!--data-icon="minus" -->
+
+            <!-- <p style="margin-top:30%">
+                <b>Stel uw doel in:</b>
+            </p>
             <p style="text-align: left">Actieve minuten:
-                <button data-icon="plus" data-role="button" data-inline="true"></button>
-                <!-- <input type="number" id="actieveMinutenInput" style="width: 10%;" value="30" /> -->
                 <button data-icon="minus" data-role="button" data-inline="true"></button>
+                <button data-icon="plus" data-role="button" data-inline="true"></button>
+                <!-- <input type="number" id="actieveMinutenInput" style="width: 10%;" value="30" /> 
+
             </p>
             <p style="text-align: left">Aantal stappen:
-                    <button data-icon="plus" data-role="button" data-inline="true"></button>
-                    <button data-icon="minus" data-role="button" data-inline="true"></button>
-            </p>
+                <button data-icon="minus" data-role="button" data-inline="true"></button>
+                <button data-icon="plus" data-role="button" data-inline="true"></button>
+
+            </p> -->
         </div>
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>

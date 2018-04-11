@@ -11,4 +11,5 @@
     <access origin="*" />
     <engine name="browser" spec="~5.0.3" />
     <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova.plugins.diagnostic" spec="^4.0.5" />
 </widget>

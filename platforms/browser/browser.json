@@ -12,8 +12,14 @@
             }
         }
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
     "dependent_plugins": {},
     "modules": [],
-    "plugin_metadata": {}
+    "plugin_metadata": {
+        "cordova.plugins.diagnostic": "4.0.5"
+    }
 }
