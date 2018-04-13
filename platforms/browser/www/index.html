@@ -141,56 +141,35 @@
 
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
     <div data-role="page" id="instellingenScreen">
+        <script src="./scripts/plusandminusbuttons.js"></script>
         <div data-role="header" id="header">
             <h2>
                 <b>Instellingen</b>
             </h2>
         </div>
         <div data-role="content">
-            <fieldset data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini">
-                <div role="heading" class="ui-controlgroup-label">
-                    <legend>Actieve minuten:</legend>
-                </div>
-                <div class="ui-controlgroup-controls ">
-
-                    <button class="ui-btn ui-icon-minus ui-btn-icon-notext" data-role="button" data-inline="true"></button>
-                    <!-- <input type="number" id="actieveMinutenInput" value="30" data-mini="true"/> 
-                     -->hoi
-                    <button class="ui-btn ui-icon-plus ui-btn-icon-notext" data-role="button" data-inline="true"></button>
-                    
-                </div>
-            </fieldset>
-            
-<!-- <fieldset data-role="controlgroup" data-type="horizontal" class="ui-controlgroup ui-controlgroup-horizontal ui-corner-all"><div role="heading" class="ui-controlgroup-label"><legend>Horizontal controlgroup, mixed:</legend></div><div class="ui-controlgroup-controls ">
-                        
-                        <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-right ui-first-child">Link</a>
-                        <button class="ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow ui-corner-all">Button</button>
-                        <label for="select-v-1e">Select</label>
-                        <div class="ui-select"><div id="select-v-1e-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow ui-last-child"><span>One</span><select name="select-v-1e" id="select-v-1e">
-                            <option value="#">One</option>
-                            <option value="#">Two</option>
-                            <option value="#">Three</option>
-                        </select></div></div>
-                    </div></fieldset>-->
-
-
-                    <!--data-icon="minus" -->
-
-            <!-- <p style="margin-top:30%">
-                <b>Stel uw doel in:</b>
+            <p style="margin-top:0%">
+                <p>
+                    <b>Stel uw doel in:</b>
+                </p>
             </p>
-            <p style="text-align: left">Actieve minuten:
-                <button data-icon="minus" data-role="button" data-inline="true"></button>
-                <button data-icon="plus" data-role="button" data-inline="true"></button>
-                <!-- <input type="number" id="actieveMinutenInput" style="width: 10%;" value="30" /> 
-
-            </p>
-            <p style="text-align: left">Aantal stappen:
-                <button data-icon="minus" data-role="button" data-inline="true"></button>
-                <button data-icon="plus" data-role="button" data-inline="true"></button>
-
-            </p> -->
         </div>
+        Actieve minuten:
+        <form style="width: 100%;">
+                <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
+                <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
+                <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
+                <input style="width:100%; text-align: center;" id="activeMinutesInput" type="number" value="50">
+                
+        </form>
+        <br/>
+        Aantal stappen:
+        <form style="width: 100%;">
+                <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>                
+                <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
+                <input style="width:100%; text-align: center;" id="stepsInput" type="number" value="50">
+        </form>
+
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
