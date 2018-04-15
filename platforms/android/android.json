@@ -18,7 +18,12 @@
             },
             "res/xml/config.xml": {
                 "parents": {
-                    "/*": []
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        }
+                    ]
                 }
             },
             "config.xml": {
@@ -63,6 +68,9 @@
     },
     "installed_plugins": {
         "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
@@ -155,9 +163,18 @@
             "merges": [
                 "cordova.plugins.diagnostic.external_storage"
             ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
         }
     ],
     "plugin_metadata": {
-        "cordova.plugins.diagnostic": "4.0.5"
+        "cordova.plugins.diagnostic": "4.0.5",
+        "cordova-plugin-device": "2.0.1"
     }
 }

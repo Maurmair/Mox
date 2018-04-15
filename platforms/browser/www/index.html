@@ -140,8 +140,8 @@
     </div>
 
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
-    <div data-role="page" id="instellingenScreen">
-        <script src="./scripts/plusandminusbuttons.js"></script>
+    <div data-role="page" id="instellingenScreen">        
+        <script src="./scripts/pushSettings.js"></script>
         <div data-role="header" id="header">
             <h2>
                 <b>Instellingen</b>
@@ -154,22 +154,24 @@
                 </p>
             </p>
         </div>
+        <div id="uuidtest"></div>
         Actieve minuten:
         <form style="width: 100%;">
-                <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
-                <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
-                <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
-                <input style="width:100%; text-align: center;" id="activeMinutesInput" type="number" value="50">
-                
+            <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
+            <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
+            <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
+            <p>
+                <input class="textInputField" id="activeMinutesInput" type="number" value="50">
+            </p>
         </form>
-        <br/>
-        Aantal stappen:
+        <br/> Aantal stappen:
         <form style="width: 100%;">
-                <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>                
-                <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
-                <input style="width:100%; text-align: center;" id="stepsInput" type="number" value="50">
+            <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>
+            <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
+            <br/>
+            <input class="textInputField" id="stepsInput" type="number" value="50">
         </form>
-
+        <button id="pushToDB" style="bottom:12%; position:absolute !important; top: auto !important; width:100%; text-align: center;">Sla op</button>
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>

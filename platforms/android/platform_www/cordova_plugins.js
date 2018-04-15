@@ -87,12 +87,21 @@ module.exports = [
     "merges": [
       "cordova.plugins.diagnostic.external_storage"
     ]
+  },
+  {
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
+    "clobbers": [
+      "device"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova.plugins.diagnostic": "4.0.5"
+  "cordova.plugins.diagnostic": "4.0.5",
+  "cordova-plugin-device": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

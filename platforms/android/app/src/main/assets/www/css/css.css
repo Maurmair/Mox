@@ -37,16 +37,29 @@
     text-align: center;
 }
 
-#circle{
-    vertical-align: middle;
-    text-align: center;
-    background-color: #729ee5;
-    color: white;
-    border-radius: 50%;
-	width: 10em;
-	height: 10em; 
-}
 *{
     font-weight: bold;
 }
 
+.ui-input-text:after, .ui-body-inherit:after, .ui-corner-all:after, .ui-shadow-inset:after{
+    content: none;
+    
+    text-align: center;
+}
+.ui-input-text, .ui-body-inherit, .ui-corner-all, .ui-shadow-inset{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+/* 
+.textInputField{
+    text-align: center; width:100%; box-shadow:1px 1px grey; border: 1px solid lightgrey; margin-top:5px;
+} */
+
+#stepsInput, #activeMinutesInput{
+    width: 80%;
+    box-shadow:1px 1px grey; 
+    border: 1px solid lightgrey; 
+    margin-top:15px;
+    text-align: center;
+}
