@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 var dateToday = new Date().toISOString().slice(0, 10);
-
+var deviceId = null;
 var myTargetStartup = {
     "Date": "",
     "ActiveMinutes": null,
@@ -14,7 +14,7 @@ window.onload = function(){
     }
 }
 function onDeviceReady(){    
-    var deviceId = device.uuid;    
+    deviceId = device.uuid;    
 }
 
 request.addEventListener("readystatechange", processRequest, false);
@@ -36,6 +36,7 @@ function processRequest(e){
 
 function registerDevice(){
     $.ajax({
+        async: true,
         url: 'http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=' + myTargetStartup.Date + '&DeviceId=' + myTargetStartup.DeviceId,
         type: 'POST',
         data: myTargetStartup,
