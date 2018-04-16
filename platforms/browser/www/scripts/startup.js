@@ -19,30 +19,8 @@ function onDeviceReady(){
 
 request.addEventListener("readystatechange", processRequest, false);
 request.open('GET', "http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + deviceId, true);
-request.send();
 
-function processRequest(e){
-    if (request.readyState == 4 && request.status == 200) {
-        var response = JSON.parse(request.responseText);
-        if (response.length >= 0) {
-            myTargetStartup.Date = dateToday;
-            myTargetStartup.ActiveMinutes = 50;
-            myTargetStartup.Steps = 50;
-            myTargetStartup.DeviceId = deviceId;
-            registerDevice();
-        }
-    }
-}
 
-function registerDevice(){
-    $.ajax({
-        url: 'http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=' + myTargetStartup.Date + '&DeviceId=' + myTargetStartup.DeviceId,
-        type: 'POST',
-        data: myTargetStartup,
-        success: function () {
-        }
-    });
-}
 
 
 
