@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 var dateToday = new Date().toISOString().slice(0, 10);
-var deviceId = null;
+var deviceId = "hoi";
 var myTargetStartup = {
     "Date": "",
     "ActiveMinutes": null,
@@ -12,9 +12,11 @@ window.onload = function(){
     if(document.readyState === "complete") {
         document.addEventListener("deviceready",onDeviceReady,false); 
     }
+    document.getElementById("testdeviceiddd").innerHTML = deviceId; 
 }
 function onDeviceReady(){    
-    deviceId = device.uuid;    
+    deviceId = device.uuid;   
+    // document.getElementById("testdeviceiddd").innerHTML = deviceId; 
 }
 
 request.addEventListener("readystatechange", processRequest, false);

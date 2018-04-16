@@ -5,6 +5,8 @@ var myTarget = {
     "DeviceId": ""
 }
 
+var deviceId = null;
+
 window.onload = function () {
     document.getElementById('btnPlusMinutes').addEventListener('click', addToInputMinutes);
     document.getElementById('btnMinusMinutes').addEventListener('click', substractFromInputMinutes);
@@ -22,8 +24,9 @@ window.onload = function () {
 
 function onDeviceReady(){
     //write your function body here
-    document.getElementById("uuidtest").innerHTML = device.uuid;
+    document.getElementById("uuidtest").innerHTML = device.uuid;    
     console.log(device.uuid);
+    deviceId = device.uuid;
 }
 
 function addToInputMinutes() {
@@ -53,15 +56,18 @@ function substractFromInputSteps() {
 function pushtoDB() {
     myTarget.Date = new Date().toISOString().slice(0, 10);
     // myTarget.DeviceId = "SamsungS8Wesley";
-    myTarget.DeviceId = device.uuid;
+    // myTarget.DeviceId = "henk";
+    myTarget.DeviceId = deviceId;
     console.log(myTarget);
     makeTheCall();
-    
+    // window.location.reload()
 }
 
 function makeTheCall(){
     $.ajax({
-        url: 'http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=' + myTarget.Date + '&DeviceId=' + device.uuid,
+        async: true,
+        url: 'http://moxwebservice.azurewebsites.net/api/Target?Id=' + myTarget.Date + '&DeviceId=' + myTarget.DeviceId,
+        // url: 'http://localhost:61497/api/Target?Id=' + myTarget.Date + '&DeviceId=' + myTarget.DeviceId,        
         type: 'PUT',
         data: myTarget,
         success: function () {
