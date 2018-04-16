@@ -3,26 +3,36 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>MOX</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="./scripts/waves.min.js"></script>
+    <script src="./scripts/wow.min.js"></script>
+    <script src="./scripts/nativedroid2.js"></script>
+    <script src="./scripts/nd2settings.js"></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
     <link rel="stylesheet" href="./css/waves.min.css" />
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/nativedroid2.css" />
     <link rel="stylesheet" href="./css/css.css" />
-    <script>              
+    <!-- <script>              
         $(function () { setTimeout(hideSplash, 2000); });
-        function hideSplash() { $.mobile.changePage("#instellingenScreen", "fade"); }
-        // $(function () { setTimeout(hideWelcome, 4000); });
-        // function hideWelcome() { $.mobile.changePage("#actieveMinutenScreen", "fade"); }
-    </script>
+        function hideSplash() { $.mobile.changePage("./pages/AantalStappen.html", "fade"); }
+    </script> -->
 </head>
 
 <body>
+        <script language="javascript" type="text/javascript">
+            window.location.href = "./pages/AantalStappen.html";
+        </script>
     <div data-role="page" id="splash">
         <div class="splash">
             <!-- <img src="splash.png" alt="splash" / style="height:812px;width:375px;"> -->
@@ -32,160 +42,6 @@
 
         </div>
     </div>
-
-    <!-- ################   HOMESCREEN    ################ -->
-    <div data-role="page" id="home">
-        <!-- UNCOMMENT TO GET ALL DEVICES -->
-        <!-- <script type="text/javascript" src="./scripts/devices.js"></script> -->
-
-        <div data-role="header" id="header">
-
-        </div>
-        <div data-role="content">
-            <div data-role="content">
-                <h2>WELKOM</h2>
-                <div id="DeviceName"></div>
-                <div id="testapi">
-                    <ul>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--<div data-role="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>-->
-    </div>
-
-    <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
-    <div data-role="page" id="locationScreen">
-        <div data-role="content">
-            <h2>LOCATION</h2>
-        </div>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-
-    <!-- ################   BLUETOOTH SCREEN    ################ -->
-    <div data-role="page" id="btScreen">
-        <div data-role="content">
-            <h2>BLUETOOTH</h2>
-        </div>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-
-    <!-- ################   KOPPELEN MOX SCREEN    ################ -->
-    <!-- ################   TODO:                  ################ -->
-    <!-- ################   * Bevestiging laten    ################ -->
-    <!-- ################     wanneer er gekoppeld ################ -->
-    <!-- ################     is                   ################ -->
-    <div data-role="page" id="koppelMoxScreen">
-        <div data-role="content">
-            <h2>Selecteer mox:</h2>
-        </div>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-
-
-    <!-- ################   ACTIEVE MIN SCREEN    ################ -->
-    <div data-role="page" id="actieveMinutenScreen">
-        <div data-role="header" id="header">
-
-            <h2>
-                <b>Actieve minuten</b>
-            </h2>
-        </div>
-        <div data-role="content">
-            <p>Circle plaatsen met x van het doel behaald</p>
-            <p>Lampjes plaatsen voor % aanduiding</p>
-            <!-- <div id="circle"><h1>Hoi</h1></div> -->
-        </div>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-
-
-    <!-- ################   STAPPEN SCREEN    ################ -->
-    <div data-role="page" id="aantalStappenScreen">
-        <div data-role="header" id="header">
-            <h2>
-                <b>Aantal stappen</b>
-            </h2>
-
-        </div>
-        <div data-role="content">
-            <p>Circle plaatsen met x van het doel behaald</p>
-            <p>Lampjes plaatsen voor % aanduiding</p>
-        </div>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-
-    <!-- ################   INSTELLINGEN SCREEN    ################ -->
-    <div data-role="page" id="instellingenScreen">        
-        <script src="./scripts/pushSettings.js"></script>
-        <div data-role="header" id="header">
-            <h2>
-                <b>Instellingen</b>
-            </h2>
-        </div>
-        <div data-role="content">
-            <p style="margin-top:0%">
-                <p>
-                    <b>Stel uw doel in:</b>
-                </p>
-            </p>
-        </div>
-        <div id="uuidtest"></div>
-        Actieve minuten:
-        <form style="width: 100%;">
-            <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
-            <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
-            <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
-            <p>
-                <input class="textInputField" id="activeMinutesInput" type="number" value="50">
-            </p>
-        </form>
-        <br/> Aantal stappen:
-        <form style="width: 100%;">
-            <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>
-            <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
-            <br/>
-            <input class="textInputField" id="stepsInput" type="number" value="50">
-        </form>
-        <button id="pushToDB" style="bottom:12%; position:absolute !important; top: auto !important; width:100%; text-align: center;">Sla op</button>
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <script src="./scripts/waves.min.js"></script>
-    <script src="./scripts/wow.min.js"></script>
-    <script src="./scripts/nativedroid2.js"></script>
-    <script src="./scripts/nd2settings.js"></script>
 </body>
 
 </html>
