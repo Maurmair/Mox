@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 var dateToday = new Date().toISOString().slice(0, 10);
-var deviceId = "hoi";
+var startUpDeviceName = null;
 var myTargetStartup = {
     "Date": "",
     "ActiveMinutes": null,
@@ -8,19 +8,22 @@ var myTargetStartup = {
     "DeviceId": ""
 }
 
-window.onload = function(){
+window.onload = function(){    
     if(document.readyState === "complete") {
         document.addEventListener("deviceready",onDeviceReady,false); 
+        // console.log(deviceIdd);
     }
-    document.getElementById("testdeviceiddd").innerHTML = deviceId; 
+    // document.getElementById("testdeviceiddd").innerHTML = deviceId; 
 }
 function onDeviceReady(){    
-    deviceId = device.uuid;   
+    // console.log(device.uuid);
+    startUpDeviceName = device.uuid;  
+    // console.log(startUpDeviceName);
     // document.getElementById("testdeviceiddd").innerHTML = deviceId; 
 }
 
 request.addEventListener("readystatechange", processRequest, false);
-request.open('GET', "http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + deviceId, true);
+request.open('GET', "http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + startUpDeviceName, true);
 request.send();
 
 function processRequest(e){
@@ -39,7 +42,7 @@ function processRequest(e){
 function registerDevice(){
     $.ajax({
         async: true,
-        url: 'http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=' + myTargetStartup.Date + '&DeviceId=' + myTargetStartup.DeviceId,
+        url: 'http://moxbackend20180406094815.azurewebsites.net/api/Target?Id=' + dateToday + '&DeviceId=' + startUpDeviceName,
         type: 'POST',
         data: myTargetStartup,
         success: function () {
