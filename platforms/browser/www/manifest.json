@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Mox",
-  "short_name": "Mox",
+  "name": "MOX",
+  "short_name": "MOX",
   "version": "com.phonegap.helloworld",
-  "description": "A blank PhoneGap app.",
-  "author": "PhoneGap Team",
+  "description": "MOX - Bewegen houdt je fit",
+  "author": "Jordi Hutjens, Wesley Maurmair",
   "icons": [],
   "start_url": "index.html"
 }
