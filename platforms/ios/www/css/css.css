@@ -176,3 +176,10 @@ li.on span.on{
 /* .android-only, .waves-effect, .waves-button, .ui-btn, .ui-shadow, .ui-corner-all{
     content: none;
 } */
+
+#toonBehaaldeActieveMinuten, #slasher, #toonDoelActieveMinuten, #toonBehaaldeStappen {
+    width: 20%; float: left;
+}
+#toonBehaaldeActieveMinuten, #toonBehaaldeStappen{
+    margin-left: 20%;
+}

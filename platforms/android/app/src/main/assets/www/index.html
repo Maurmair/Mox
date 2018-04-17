@@ -6,17 +6,18 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
     <title>MOX</title>
 
     <script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="./js/phoneFunctions.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="./js/dates.js"></script>
 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
     <link rel="stylesheet" href="./css/waves.min.css" />
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+
     <!-- <div data-role="page" id="splash">
         <div class="splash">
             <h1 id="moxtitle">Mox</h2>
@@ -52,7 +54,9 @@
             <div id="testdeviceiddd"></div>
             <p>Circle plaatsen met x van het doel behaald</p>
             <p>Lampjes plaatsen voor % aanduiding</p>
-            <h3 id="toonDoelActieveMinuten">....</h3>
+            <div id="toonBehaaldeActieveMinuten">....</div>
+            <div id="slasher">/</div>
+            <div id="toonDoelActieveMinuten">....</div>
             <!-- <div id="toonDoel">Hoi</div> -->
             <!-- <div id="circle"><h1>Hoi</h1></div> -->
         </div>
@@ -75,7 +79,9 @@
         <div data-role="content">
             <p>Circle plaatsen met x van het doel behaald</p>
             <p>Lampjes plaatsen voor % aanduiding</p>
-            <h3 id="toonDoelStappen">....</h3>
+            <div id="toonBehaaldeStappen">....</div>
+            <div id="slasher">/</div>
+            <div id="toonDoelStappen">....</div>
         </div>
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -86,8 +92,6 @@
 
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
 
-    <div data-role="page" id="instellingenScreen">        
-        <script src="./js/pushSettings.js"></script>
     <div data-role="page" id="instellingenScreen">
         <div data-role="header" id="header">
             <h2>
@@ -119,7 +123,7 @@
             <input class="textInputField" id="stepsInput" type="number" value="">
         </form>
         <button id="pushToDB">Sla op</button>
-        <br>
+        <br/>
         <br/>
         <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
         <div data-role="footer" id="footer">
@@ -277,7 +281,17 @@
         </div>
         <input type="button" onclick="location.href='#actieveMinutenScreen';" value="Afronden" />
     </div>
-
+    <script>
+        var deviceUuid = "";
+        window.onload = function () {
+            if (document.readyState === "complete") {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+        }
+        function onDeviceReady() {
+            deviceUuid = device.uuid;
+        }
+    </script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -286,9 +300,10 @@
     <script type="text/javascript" src="./js/wow.min.js"></script>
     <script type="text/javascript" src="./js/nativedroid2.js"></script>
     <script type="text/javascript" src="./js/nd2settings.js"></script>
-
     <script type="text/javascript" src="./js/pushSettings.js"></script>
+    <script type="text/javascript" src="./js/inputData.js"></script>
     <!-- <script src="./js/startup.js"></script> -->
 
 </body>
+
 </html>
