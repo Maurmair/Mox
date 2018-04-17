@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
     <link rel="stylesheet" href="./css/waves.min.css" />
@@ -106,13 +106,14 @@
 
             <h2>
                 <b>Actieve minuten</b>
-                
+
             </h2>
         </div>
         <div data-role="content">
-                <div id="testdeviceiddd"></div>
             <p>Circle plaatsen met x van het doel behaald</p>
             <p>Lampjes plaatsen voor % aanduiding</p>
+            <p id="toonDoel">....</p>
+            <!-- <div id="toonDoel">Hoi</div> -->
             <!-- <div id="circle"><h1>Hoi</h1></div> -->
         </div>
         <div data-role="footer" id="footer">
@@ -143,8 +144,8 @@
     </div>
 
     <!-- ################   INSTELLINGEN SCREEN    ################ -->
-    <div data-role="page" id="instellingenScreen">        
-        <script src="./scripts/pushSettings.js"></script>
+    <div data-role="page" id="instellingenScreen">
+
         <div data-role="header" id="header">
             <h2>
                 <b>Instellingen</b>
@@ -164,7 +165,7 @@
             <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
             <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
             <p>
-                <input class="textInputField" id="activeMinutesInput" type="number" value="50">
+                <input class="textInputField" id="activeMinutesInput" type="number" value="">
             </p>
         </form>
         <br/> Aantal stappen:
@@ -172,7 +173,7 @@
             <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>
             <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
             <br/>
-            <input class="textInputField" id="stepsInput" type="number" value="50">
+            <input class="textInputField" id="stepsInput" type="number" value="">
         </form>
         <button id="pushToDB" style="bottom:12%; position:absolute !important; top: auto !important; width:100%; text-align: center;">Sla op</button>
         <div data-role="footer" id="footer">
@@ -189,8 +190,8 @@
     <script src="./scripts/wow.min.js"></script>
     <script src="./scripts/nativedroid2.js"></script>
     <script src="./scripts/nd2settings.js"></script>
-    <!-- <script src="./scripts/startup.js"></script> -->
-    
+    <script src="./scripts/dates.js"></script>
+    <script src="./scripts/pushSettings.js"></script>
 </body>
 
 </html>
