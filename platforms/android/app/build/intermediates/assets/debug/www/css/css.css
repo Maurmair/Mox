@@ -1,0 +1,65 @@
+[data-role=page]{height: 100% !important; position:relative !important; text-align: center; }
+[data-role=header]{text-align:center;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center;} 
+#splash {
+    color: white;
+    text-align: center;     
+    background: radial-gradient(circle,#729ee5, #476aa3);
+    
+}
+#home{
+    color: white;
+    background: radial-gradient(circle,#729ee5, #476aa3);  
+    text-align: center;     
+
+}
+#moxtitle{
+    padding-top: 70%;
+}
+#homefooter{
+    color: white;
+    text-align: center;     
+    background: radial-gradient(circle,#729ee5, #476aa3);  
+}
+
+#header{    
+    background-color: #729ee5; color: white;
+    width:100%;
+    text-align: center;    
+}
+
+#footer{
+    width:100%;
+    color:white; background-color: #476aa3;"
+}
+
+.ui-header .ui-title{
+    text-align: center;
+}
+
+*{
+    font-weight: bold;
+}
+
+.ui-input-text:after, .ui-body-inherit:after, .ui-corner-all:after, .ui-shadow-inset:after{
+    content: none;
+    
+    text-align: center;
+}
+.ui-input-text, .ui-body-inherit, .ui-corner-all, .ui-shadow-inset{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+/* 
+.textInputField{
+    text-align: center; width:100%; box-shadow:1px 1px grey; border: 1px solid lightgrey; margin-top:5px;
+} */
+
+#stepsInput, #activeMinutesInput{
+    width: 80%;
+    box-shadow:1px 1px grey; 
+    border: 1px solid lightgrey; 
+    margin-top:15px;
+    text-align: center;
+}
