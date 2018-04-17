@@ -17,7 +17,4 @@ Date.prototype.yyyymmdd = function(showtime) {
   tomorrow.setDate(d.getDate() + 1);
   var yesterday = new Date(d);
   yesterday.setDate(d.getDate() -1);
-   
-  var output = 'Date: ' + d.yyyymmdd() + '<br/>Day before: ' + yesterday.yyyymmdd() + '<br/>Day after: ' + tomorrow.yyyymmdd();
-  output += '<br/>toISOString (Date): ' + d.toISOString().substring(0,10);
-  $('#resultbox').html(output);
+  

@@ -214,14 +214,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-splashscreen.SplashScreen",
-    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-    "pluginId": "cordova-plugin-splashscreen",
-    "clobbers": [
-      "navigator.splashscreen"
-    ]
-  },
-  {
     "id": "cordova.plugins.diagnostic.Diagnostic",
     "file": "plugins/cordova.plugins.diagnostic/www/ios/diagnostic.js",
     "pluginId": "cordova.plugins.diagnostic",
@@ -316,7 +308,6 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.1",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-geolocation": "4.0.1",
-  "cordova-plugin-splashscreen": "5.0.3-dev",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova.plugins.diagnostic": "4.0.5"
 };

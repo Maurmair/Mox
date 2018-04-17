@@ -23,8 +23,6 @@
 		F1E574E11DAD47E88AD48758 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D1371C1671AC4F6AB835CDFF /* CDVAssetLibraryFilesystem.m */; };
 		53E81AAB476C48DD989BEB3D /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1723BF7B22ED4AD0A6D58694 /* CDVLocation.m */; };
 		EA61C26C7DE44611AA819FEE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB825544B14A4D4BABFA8719 /* CoreLocation.framework */; };
-		02CFAB68209044C79246AD2D /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1D688D2FC4C27B93F96BF /* CDVSplashScreen.m */; };
-		945EE33ABD9C4146A829CF6E /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1DBAF555F47B8B976C6E6 /* CDVViewController+SplashScreen.m */; };
 		3EB867FA7A124E769875543E /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE9B5D55FA64DE98AAF1712 /* Diagnostic.m */; };
 		F5F6EEBF36C24F188FF9CCEB /* Diagnostic_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C56ED329643C6A112935B /* Diagnostic_Location.m */; };
 		4B2C2AF04CE643CC802D0092 /* Diagnostic_Bluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DE93401933432D9DAA040C /* Diagnostic_Bluetooth.m */; };
@@ -96,10 +94,6 @@
 		1723BF7B22ED4AD0A6D58694 /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		15950C5998894AEF8C867BA5 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		BB825544B14A4D4BABFA8719 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		AEB1D688D2FC4C27B93F96BF /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		1FF1DBAF555F47B8B976C6E6 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		019BEBA4C11A4DC598931775 /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		00E02A3E27D6415FA5D790DB /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		1CE9B5D55FA64DE98AAF1712 /* Diagnostic.m */ = {isa = PBXFileReference; name = "Diagnostic.m"; path = "cordova.plugins.diagnostic/Diagnostic.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		025C56ED329643C6A112935B /* Diagnostic_Location.m */ = {isa = PBXFileReference; name = "Diagnostic_Location.m"; path = "cordova.plugins.diagnostic/Diagnostic_Location.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		03DE93401933432D9DAA040C /* Diagnostic_Bluetooth.m */ = {isa = PBXFileReference; name = "Diagnostic_Bluetooth.m"; path = "cordova.plugins.diagnostic/Diagnostic_Bluetooth.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
@@ -263,10 +257,6 @@
 				FCA832C2B4264DAFB30186A0 /* CDVAssetLibraryFilesystem.h */,
 				1723BF7B22ED4AD0A6D58694 /* CDVLocation.m */,
 				15950C5998894AEF8C867BA5 /* CDVLocation.h */,
-				AEB1D688D2FC4C27B93F96BF /* CDVSplashScreen.m */,
-				1FF1DBAF555F47B8B976C6E6 /* CDVViewController+SplashScreen.m */,
-				019BEBA4C11A4DC598931775 /* CDVSplashScreen.h */,
-				00E02A3E27D6415FA5D790DB /* CDVViewController+SplashScreen.h */,
 				1CE9B5D55FA64DE98AAF1712 /* Diagnostic.m */,
 				025C56ED329643C6A112935B /* Diagnostic_Location.m */,
 				03DE93401933432D9DAA040C /* Diagnostic_Bluetooth.m */,
@@ -406,8 +396,6 @@
 				CF6893B611124C799459605E /* CDVLocalFilesystem.m in Sources */,
 				F1E574E11DAD47E88AD48758 /* CDVAssetLibraryFilesystem.m in Sources */,
 				53E81AAB476C48DD989BEB3D /* CDVLocation.m in Sources */,
-				02CFAB68209044C79246AD2D /* CDVSplashScreen.m in Sources */,
-				945EE33ABD9C4146A829CF6E /* CDVViewController+SplashScreen.m in Sources */,
 				3EB867FA7A124E769875543E /* Diagnostic.m in Sources */,
 				F5F6EEBF36C24F188FF9CCEB /* Diagnostic_Location.m in Sources */,
 				4B2C2AF04CE643CC802D0092 /* Diagnostic_Bluetooth.m in Sources */,
