@@ -5,8 +5,7 @@
   "cordova": {
     "platforms": [
       "browser",
-      "android",
-      "ios"
+      "android"
     ],
     "plugins": {
       "cordova.plugins.diagnostic": {},
@@ -17,7 +16,6 @@
     "cordova-android": "~7.0.0",
     "cordova-browser": "~5.0.3",
     "cordova-plugin-device": "^2.0.1",
-    "cordova.plugins.diagnostic": "^4.0.5",
-    "cordova-ios": "4.5.4"
+    "cordova.plugins.diagnostic": "^4.0.5"
   }
 }

@@ -30,7 +30,7 @@
 
 #footer{
     width:100%;
-    color:white; background-color: #476aa3;
+    color:white; background-color: #476aa3;"
 }
 
 .ui-header .ui-title{
@@ -61,114 +61,5 @@
     box-shadow:1px 1px grey; 
     border: 1px solid lightgrey; 
     margin-top:15px;
-    text-align: center;
-}
-
-body,
-ul{
-    padding: 0;
-    margin: 0;
-}
-
-body.ios{
-    margin-top: 20px;
-}
-
-body:not(.android) .android-only,
-body:not(.ios) .ios-only,
-body:not(.windows) .windows-only{
-    display: none;
-}
-
-.os-conditional,
-.settings button.os-conditional{
-    display: none;
-}
-
-body.android .os-conditional.android,
-body.ios .os-conditional.ios,
-body.windows .os-conditional.windows,
-body.android .settings button.os-conditional.android,
-body.ios .settings button.os-conditional.ios,
-body.windows .settings button.os-conditional.windows{
-    display: block;
-}
-
-
-h2{
-    text-align: center;
-    margin-top: 0;
-    padding-top: 0;
-}
-li{
-    list-style: none;
-    clear: right;
-    padding: 0;
-    margin: 12px 0 0 4px;
-}
-li span.name{
-
-}
-li span.state,
-li span.value{
-    float: right;
-    padding: 2px;
-}
-li span.on{
-    background-color: green;
-}
-li span.off{
-    background-color: red;
-}
-
-li span.on,
-li.off span.on,
-li.on span.off{
-    display: none;
-}
-
-li.on span.on{
-    display: list-item !important;
-}
-
-.settings{
-    border-top: 1px solid #000;
-    margin-top: 24px;
-    padding-top: 24px;
-    width: 100%;
-}
-
-.settings button,
-.settings select{
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 24px;
-}
-
-.disabled{
-    color: #cccccc;
-}
-
-#request-external-sd-details-results{
-    display: none;
-    margin-top: 12px;
-    border-top: 1px solid #000;
-    width: 100%;
-    word-break: break-word;
-}
-#request-external-sd-details-results p{
-    padding: 12px;
-}
-#write-external-sd-file{
-    display: none;
-}
-
-#request-remote-notifications{
-    border: 1px solid #ccc;
-    margin: 0 12px;
-    padding-top: 12px;
-}
-
-#request-remote-notifications *{
     text-align: center;
 }
