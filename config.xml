@@ -9,6 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+<<<<<<< HEAD
     <preference name="Fullscreen" value="false" />
     <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
@@ -39,4 +40,10 @@
     <engine name="browser" spec="~5.0.3" />
     <engine name="android" spec="~7.0.0" />
     <engine name="ios" spec="4.5.4" />
+=======
+    <plugin name="cordova.plugins.diagnostic" spec="^4.0.5" />
+    <plugin name="cordova-plugin-device" spec="^2.0.1" />
+    <engine name="browser" spec="~5.0.3" />
+    <engine name="android" spec="~7.0.0" />
+>>>>>>> 6a51d24a8fdb5607c9e80aaab546d5f86d614d1e
 </widget>
