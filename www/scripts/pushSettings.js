@@ -47,7 +47,7 @@ function onDeviceReady() {
     deviceId = device.uuid;
     
     // deviceId = "SamsungS8Wesley";
-    
+    myTarget.Date = new Date().toISOString().slice(0, 10);
     myTarget.DeviceId = deviceId;
     	
     // myTarget.DeviceId = "609569da5ee53f80";
@@ -56,7 +56,7 @@ function onDeviceReady() {
     requestToday.send();
     document.getElementById("uuidtest").innerHTML = device.uuid;
     // console.log(device.uuid);
-    myTarget.Date = new Date().toISOString().slice(0, 10);
+    
     
     // makeTheCall();
 }
@@ -72,7 +72,8 @@ function processRequestToday(e) {
             // myTarget.DeviceId = responseToday.DeviceId;
             document.getElementById("activeMinutesInput").value = myTarget.ActiveMinutes;
             document.getElementById("stepsInput").value = myTarget.Steps;
-            document.getElementById("toonDoel").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
         } else if (responseToday == null) {
             requestYesterday.addEventListener("readystatechange", processRequestYesterday, false);
             requestYesterday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateYesterday + "&DeviceId=" + myTarget.DeviceId, true);
@@ -89,19 +90,22 @@ function processRequestYesterday(e) {
             myTarget.ActiveMinutes = responseYesterday.ActiveMinutes;
             myTarget.Steps = responseYesterday.Steps;
             // myTarget.DeviceId = responseYesterday.DeviceId;
-            document.getElementById("toonDoel").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
             makeTheCall();
         } else if (responseYesterday == null) {
             myTarget.Date = dateToday;
             myTarget.ActiveMinutes = 50;
             myTarget.Steps = 50;
             myTarget.DeviceId = deviceId;
-            document.getElementById("toonDoel").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
+            document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
             makeTheCall();
         }
         document.getElementById("activeMinutesInput").value = myTarget.ActiveMinutes;
         document.getElementById("stepsInput").value = myTarget.Steps;
-        document.getElementById("toonDoel").innerHTML = myTarget.ActiveMinutes;
+        document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
+        document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
     }
 }
 
