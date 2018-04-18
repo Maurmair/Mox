@@ -28,6 +28,7 @@ function onDeviceReady() {
     // uuid = new DeviceUUID().get();
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();
+    console.log(navigator.notification);
 
     //get device id
     // deviceId = uuid;
