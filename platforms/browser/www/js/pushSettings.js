@@ -1,65 +1,65 @@
-// var requestToday = new XMLHttpRequest();
-// var requestYesterday = new XMLHttpRequest();
-// var dateToday = new Date().toISOString().slice(0, 10);
-// var dateYesterday = yesterday.toISOString().slice(0, 10);
+var requestToday = new XMLHttpRequest();
+var requestYesterday = new XMLHttpRequest();
+var dateToday = new Date().toISOString().slice(0, 10);
+var dateYesterday = yesterday.toISOString().slice(0, 10);
 
 
-// var myTarget = {
-//     "Date": "",
-//     "ActiveMinutes": null,
-//     "Steps": null,
-//     "DeviceId": ""
-// }
+var myTarget = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
 
-// var todaysTarget = {
-//     "Date": "",
-//     "ActiveMinutes": null,
-//     "Steps": null,
-//     "DeviceId": ""
-// }
+var todaysTarget = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
 
-// var deviceId = null;
+var deviceId = null;
 
-// window.onload = function () {
-//     document.getElementById('btnPlusMinutes').addEventListener('click', addToInputMinutes);
-//     document.getElementById('btnMinusMinutes').addEventListener('click', substractFromInputMinutes);
-//     document.getElementById('btnPlusSteps').addEventListener('click', addToInputSteps);
-//     document.getElementById('btnMinusSteps').addEventListener('click', substractFromInputSteps);
-//     document.getElementById("pushToDB").addEventListener('click', pushtoDB);
-//     // var x = parseInt(document.getElementById("activeMinutesInput").value);
-//     // var y = parseInt(document.getElementById("stepsInput").value);
-//     // deviceId = "GVD"; //device.uuid;
-//     // myTarget.ActiveMinutes = x;
-//     // myTarget.Steps = y;
-//     if (document.readyState === "complete") {
-//         // myTarget.DeviceId = deviceId;
+window.onload = function () {
+    document.getElementById('btnPlusMinutes').addEventListener('click', addToInputMinutes);
+    document.getElementById('btnMinusMinutes').addEventListener('click', substractFromInputMinutes);
+    document.getElementById('btnPlusSteps').addEventListener('click', addToInputSteps);
+    document.getElementById('btnMinusSteps').addEventListener('click', substractFromInputSteps);
+    document.getElementById("pushToDB").addEventListener('click', pushtoDB);
+    // var x = parseInt(document.getElementById("activeMinutesInput").value);
+    // var y = parseInt(document.getElementById("stepsInput").value);
+    // deviceId = "GVD"; //device.uuid;
+    // myTarget.ActiveMinutes = x;
+    // myTarget.Steps = y;
+    if (document.readyState === "complete") {
+        // myTarget.DeviceId = deviceId;
         
-//         document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
         
-//     }
-// }
+    }
+}
 
 
 
 // REQUEST NAAR WINDOW ONLOAD VERHUIZEN. VANUIT IF DOCUMENT READYSTATE IS COMPLETE FUNCTIE AANROEP PROCESSREQUEST
-// function onDeviceReady() {
-//     // //write your function body here
-//     // deviceId = device.uuid;
+function onDeviceReady() {
+    //write your function body here
+    deviceId = device.uuid;
     
-//     // // deviceId = "SamsungS8Wesley";
-//     // myTarget.Date = new Date().toISOString().slice(0, 10);
-//     // myTarget.DeviceId = deviceId;
+    // deviceId = "SamsungS8Wesley";
+    myTarget.Date = new Date().toISOString().slice(0, 10);
+    myTarget.DeviceId = deviceId;
     	
-//     // // myTarget.DeviceId = "609569da5ee53f80";
-//     // requestToday.addEventListener("readystatechange", processRequestToday, false);
-//     // requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + myTarget.DeviceId, true);
-//     // requestToday.send();
-//     // document.getElementById("uuidtest").innerHTML = device.uuid;
-//     // // console.log(device.uuid);
+    // myTarget.DeviceId = "609569da5ee53f80";
+    requestToday.addEventListener("readystatechange", processRequestToday, false);
+    requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + myTarget.DeviceId, true);
+    requestToday.send();
+    document.getElementById("uuidtest").innerHTML = device.uuid;
+    // console.log(device.uuid);
     
     
-//     // // makeTheCall();
-// }
+    // makeTheCall();
+}
 
 
 function processRequestToday(e) {
