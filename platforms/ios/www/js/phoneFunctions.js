@@ -1,7 +1,14 @@
+var deviceId;
 var platform, osVersion;
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();
+
+    //get device id
+    deviceId = device.uuid;
 
     $('body').addClass(platform);
 

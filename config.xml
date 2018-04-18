@@ -11,14 +11,23 @@
     <access origin="*" />
     <preference name="Fullscreen" value="false" />
     <preference name="phonegap-version" value="cli-7.1.0" />
-    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH NOTIFICATIONS REMINDERS" />
+    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
     <platform name="android">
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.BLUETOOTH" />
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
             <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.READ_CALENDAR" />
         </config-file>
     </platform>
     <platform name="ios">
@@ -35,11 +44,9 @@
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
-    <engine name="browser" spec="~5.0.3" />
-    <engine name="android" spec="~7.0.0" />
-    <engine name="ios" spec="4.5.4" />
     <plugin name="cordova.plugins.diagnostic" spec="^4.0.5" />
     <plugin name="cordova-plugin-device" spec="^2.0.1" />
     <engine name="browser" spec="~5.0.3" />
-    <engine name="android" spec="~7.0.0" />
+    <engine name="android" spec="7.0.0" />
+    <engine name="ios" spec="4.5.4" />
 </widget>
