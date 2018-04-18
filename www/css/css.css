@@ -1,6 +1,6 @@
-[data-role=page]{height: 100% !important; position:relative !important; text-align: center; }
+[data-role=page]{height: 100% !important; position:relative !important; text-align: center; background: linear-gradient(#3dc2bf,#178fbd); }
 [data-role=header]{text-align:center;}
-[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center; padding-top: 5px } 
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100% !important; text-align: center !important; padding-top: 5px;} 
 
 #splash {
     color: white;
@@ -8,36 +8,20 @@
     background: radial-gradient(circle,#729ee5, #476aa3);
 }
 
-#home{
-    color: white;
-    background: radial-gradient(circle,#729ee5, #476aa3);  
-    text-align: center;     
-
-}
-#moxtitle{
-    padding-top: 70%;
-}
-#homefooter{
-    color: white;
-    text-align: center;     
-    background: radial-gradient(circle,#729ee5, #476aa3);  
-}
-
-#header{    
-    background-color: #729ee5; color: white;
+#header{  
     width:100%;
-    text-align: center;    
+    text-align: center; 
+    background: transparent;
+    font-size: 24px;
 }
 
 #content{
-    font-size: 24px;
-    background-color: #476aa3;
+    font-size: 20px;
 }
 
 #footer{
     width:100%;
-    color:white; background-color: #476aa3;
-    background-size: 75%;
+    background: transparent;
 }
 
 .ui-header .ui-title{
@@ -50,7 +34,6 @@
 
 .ui-input-text:after, .ui-body-inherit:after, .ui-corner-all:after, .ui-shadow-inset:after{
     content: none;
-    
     text-align: center;
 }
 .ui-input-text, .ui-body-inherit, .ui-corner-all, .ui-shadow-inset{
@@ -58,10 +41,7 @@
     width: 80%;
     margin: auto;
 }
-/* 
-.textInputField{
-    text-align: center; width:100%; box-shadow:1px 1px grey; border: 1px solid lightgrey; margin-top:5px;
-} */
+
 
 #stepsInput, #activeMinutesInput{
     width: 80%;
@@ -101,12 +81,6 @@ body.windows .settings button.os-conditional.windows{
     display: block;
 }
 
-
-h2{
-    text-align: center;
-    margin-top: 0;
-    padding-top: 0;
-}
 li{
     list-style: none;
     clear: right;
@@ -118,7 +92,7 @@ li span.name{
 }
 li span.state,
 li span.value{
-    float: right;
+    /* float: right; */
     padding: 2px;
 }
 li span.on{
@@ -180,10 +154,6 @@ li.on span.on{
     text-align: center;
 }
 
-/* .android-only, .waves-effect, .waves-button, .ui-btn, .ui-shadow, .ui-corner-all{
-    content: none;
-} */
-
 #toonBehaaldeActieveMinuten, #slasher, #toonDoelActieveMinuten, #toonBehaaldeStappen {
     width: 20%; float: left;
 }
@@ -196,98 +166,14 @@ progress[value] {
     width:90%;
  }
 
-
-/* PROGRRESS BAR */
-/*
- * Copyright (c) 2012-2013 Thibaut Courouble
- * http://www.cssflow.com
- * Licensed under the MIT License
- *
- * Sass/SCSS source: https://goo.gl/UhXKg
- * PSD by Vin Thomas: https://goo.gl/n1M2e
- */
-/*
- body {
-    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-    color: #404040;
-    background: #2a2a2a;
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px;
   }
   
-  .container {
-    margin: 60px auto;
-    width: 90%;
-    text-align: center;
+  /* to center flex-items */
+  .flex-item {
+     margin: auto;
   }
-  
-  .container .progress {
-    margin: 0 auto;
-    width: 90%;
-  }
-  
-  .progress {
-    padding: 4px;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
-  }
-  
-  .progress-bar {
-    height: 16px;
-    border-radius: 4px;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-    transition: 0.4s linear;
-    transition-property: width, background-color;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
-  }
-  
-  /*
-   * Note: using adjacent or general sibling selectors combined with
-   *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
-   *       See this article for more info and a potential fix:
-   *       https://css-tricks.com/webkit-sibling-bug/
-   
-  
-  #five:checked ~ .progress > .progress-bar {
-    width: 5%;
-    background-color: #f63a0f;
-  }
-  
-  #twentyfive:checked ~ .progress > .progress-bar {
-    width: 25%;
-    background-color: #f27011;
-  }
-  
-  #fifty:checked ~ .progress > .progress-bar {
-    width: 50%;
-    background-color: #f2b01e;
-  }
-  
-  #seventyfive:checked ~ .progress > .progress-bar {
-    width: 75%;
-    background-color: #f2d31b;
-  }
-  
-  #onehundred:checked ~ .progress > .progress-bar {
-    width: 100%;
-    background-color: #86e01e;
-  }
-  
-  .radio {
-    display: none;
-  }
-  
-  .label {
-    display: inline-block;
-    margin: 0 5px 20px;
-    padding: 3px 8px;
-    color: #aaa;
-    text-shadow: 0 1px black;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .radio:checked + .label {
-    color: white;
-    background: rgba(0, 0, 0, 0.25);
-  }
-  */

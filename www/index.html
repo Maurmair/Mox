@@ -16,9 +16,10 @@
     <script type="text/javascript" src="./js/dates.js"></script>
     <script type="text/javascript" src="./js/getData.js"></script>
     <script type="text/javascript" src="./js/helpDialogs.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/nativedroid2.css" />
@@ -44,7 +45,6 @@
     <!-- ################   ACTIEVE MIN SCREEN    ################ -->
     <div data-role="page" id="actieveMinutenScreen">
         <div data-role="header" id="header">
-
             <h2>
                 <b>Actieve minuten</b>
             </h2>
@@ -54,29 +54,26 @@
             Hier kunt u uw dag voortgang zien. U ziet rechts uw doel, en links het aantal gelopen minuten voor deze dag.
             <br/>
             <br/>
+            <div id="toonBehaaldeActieveMinuten">....</div>
+            <div id="slasher">/</div>
+            <div id="toonDoelActieveMinuten">....</div>
+            <progress id="progressActiveMinutes"></progress>
         </div>
-        <div id="toonBehaaldeActieveMinuten">....</div>
-        <div id="slasher">/</div>
-        <div id="toonDoelActieveMinuten">....</div>
-        <progress id="progressActiveMinutes"></progress>
 
         <div data-role="footer" id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-lg-3 col-sm-12">
-                        <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
-                    </div>
-                    <div class="col col-lg-3 col-sm-12">
-                        <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
-                    </div>
-                    <div class="col col-lg-3 col-sm-12">
-                        <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
-                    </div>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- ################   STAPPEN SCREEN    ################ -->
     <div data-role="page" id="aantalStappenScreen">
@@ -100,9 +97,17 @@
 
         </div>
         <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -142,19 +147,27 @@
             <br/>
             <button id="pushToDB">Sla op</button>
             <br/>
-        </div>
-        <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
-        <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
+            <div data-role="footer" id="footer" style="margin-left:-16px;">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
+                    </div>
+                    <div class="flex-item">
+                        <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
+                    </div>
+                    <div class="flex-item">
+                        <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- ################   HOMESCREEN    ################ -->
     <div data-role="page" id="initScreen">
         <div data-role="header" id="header">
-            <h2>WELKOM</h2>
+            <h2>Initialisatie</h2>
         </div>
 
         <div data-role="content">
@@ -166,7 +179,7 @@
     <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
     <div data-role="page" id="locationScreen">
         <div data-role="header" id="header">
-            <h2>LOCATIE</h2>
+            <h2>Locatie</h2>
         </div>
         <div data-role="content">
             <div id="state">
@@ -181,7 +194,7 @@
 
             <div class="settings">
 
-                <button id="location-settings" class="os-conditional android windows">Open Location settings</button>
+                <button id="location-settings" class="os-conditional android windows">Open Locatie instellingen</button>
                 <!-- MOET IN DE STARTUP KOMEN -->
                 <h3>Request permissions</h3>
                 <button id="request-location-always" class="ios-only request-location">Request Location Authorization Always</button>
@@ -202,8 +215,12 @@
             <div>
                 <input type="button" onclick="location.href='#btScreen';" value="Volgende stap" />
             </div>
-            <div data-role="footer" id="footer">
-                <a href="#" onclick="showGPSAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            <div data-role="footer" id="footer" style="margin-left:-16px;">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <a href="#" onclick="showGPSAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -231,8 +248,12 @@
             <div>
                 <input type="button" onclick="location.href='#koppelMoxScreen';" value="Volgende stap" />
             </div>
-            <div data-role="footer" id="footer">
-                <a href="#" onclick="showBluetoothAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            <div data-role="footer" id="footer" style="margin-left:-16px;">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <a href="#" onclick="showBluetoothAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -247,8 +268,12 @@
             <div>
                 <input type="button" onclick="location.href='#actieveMinutenScreen';" value="Afronden" />
             </div>
-            <div data-role="footer" id="footer">
-                <a href="#" onclick="showMoxAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            <div data-role="footer" id="footer" style="margin-left:-16px;">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <a href="#" onclick="showMoxAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
