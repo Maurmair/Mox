@@ -1,5 +1,50 @@
 var platform, osVersion;
+var deviceId;
+var requestToday = new XMLHttpRequest();
+var requestYesterday = new XMLHttpRequest();
+var dateToday = new Date().toISOString().slice(0, 10);
+var dateYesterday = yesterday.toISOString().slice(0, 10);
+
+
+var myTarget = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
+
+var todaysTarget = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
 function onDeviceReady() {
+
+    document.getElementById('btnPlusMinutes').addEventListener('click', addToInputMinutes);
+    document.getElementById('btnMinusMinutes').addEventListener('click', substractFromInputMinutes);
+    document.getElementById('btnPlusSteps').addEventListener('click', addToInputSteps);
+    document.getElementById('btnMinusSteps').addEventListener('click', substractFromInputSteps);
+    document.getElementById("pushToDB").addEventListener('click', pushtoDB);
+
+    //write your function body here
+    deviceId = device.uuid;
+    
+    // deviceId = "SamsungS8Wesley";
+    myTarget.Date = new Date().toISOString().slice(0, 10);
+    myTarget.DeviceId = deviceId;
+    	
+    // myTarget.DeviceId = "609569da5ee53f80";
+    requestToday.addEventListener("readystatechange", processRequestToday, false);
+    requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + myTarget.DeviceId, true);
+    requestToday.send();
+    document.getElementById("uuidtest").innerHTML = device.uuid;
+    // console.log(device.uuid);
+    
+    
+    // makeTheCall();
+
+
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();
 
