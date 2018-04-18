@@ -20,11 +20,14 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     myTarget.Date = new Date().toISOString().slice(0, 10);
-    myTarget.DeviceId = device.uuid;
+    // myTarget.DeviceId = device.uuid;
+    myTarget.DeviceId = "609569da5ee53f80";
     myInputData.Date = new Date().toISOString().slice(0, 10);
-    myInputData.DeviceId = device.uuid;
+    // myInputData.DeviceId = device.uuid;
+    myInputData.DeviceId = "609569da5ee53f80";
     getTarget();
     getInputData();
+     
     // uuid = new DeviceUUID().get();
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();

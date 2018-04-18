@@ -25,6 +25,7 @@ function getTarget() {
     requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + myTarget.Date + "&DeviceId=" + myTarget.DeviceId, true);
     requestToday.send();
     document.getElementById("uuidtest").innerHTML = myTarget.DeviceId;
+
     // console.log(device.uuid)
 
     // makeTheCall();
@@ -45,6 +46,7 @@ function processRequestToday(e) {
             document.getElementById("stepsInput").value = myTarget.Steps;
             document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
             document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
+            updateProgressBar(); 
         } else if (responseToday == null) {
             requestYesterday.addEventListener("readystatechange", processRequestYesterday, false);
             requestYesterday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateYesterday + "&DeviceId=" + myTarget.DeviceId, true);
@@ -64,6 +66,7 @@ function processRequestYesterday(e) {
             document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
             document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
             makeTheCall();
+            updateProgressBar(); 
         } else if (responseYesterday == null) {
             myTarget.Date = dateToday;
             myTarget.ActiveMinutes = 50;
@@ -72,11 +75,13 @@ function processRequestYesterday(e) {
             document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
             document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
             makeTheCall();
+            updateProgressBar(); 
         }
         document.getElementById("activeMinutesInput").value = myTarget.ActiveMinutes;
         document.getElementById("stepsInput").value = myTarget.Steps;
         document.getElementById("toonDoelActieveMinuten").innerHTML = myTarget.ActiveMinutes;
         document.getElementById("toonDoelStappen").innerHTML = myTarget.Steps;
+        updateProgressBar(); 
     }
 }
 
@@ -90,4 +95,5 @@ function makeTheCall() {
         success: function () {
         }
     });
+    updateProgressBar(); 
 }
