@@ -30,6 +30,7 @@
 
 *{
     font-weight: bold;
+    color: white;
 }
 
 .ui-input-text:after, .ui-body-inherit:after, .ui-corner-all:after, .ui-shadow-inset:after{

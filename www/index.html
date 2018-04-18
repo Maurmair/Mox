@@ -93,9 +93,6 @@
             <div id="toonDoelStappen">....</div>
             <progress id="progressSteps"></progress>
         </div>
-        <div class="container">
-
-        </div>
         <div data-role="footer" id="footer">
             <div class="flex-container">
                 <div class="flex-item">
@@ -148,17 +145,17 @@
             <button id="pushToDB">Sla op</button>
             <br/>
             <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
-            <div data-role="footer" id="footer" style="margin-left:-16px;">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
-                    </div>
-                    <div class="flex-item">
-                        <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
-                    </div>
-                    <div class="flex-item">
-                        <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
-                    </div>
+        </div>
+        <div data-role="footer" id="footer">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
                 </div>
             </div>
         </div>
@@ -172,9 +169,24 @@
 
         <div data-role="content">
             Tekst over het doorlopen van het instel traject.
+
+            <input type="button" onclick="location.href='#locationScreen';" value="Begin met Initialisatie" />
         </div>
-        <input type="button" onclick="location.href='#locationScreen';" value="Begin met Initialisatie" />
+        <div data-role="footer" id="footer">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#actieveMinutenScreen" class="glyphicon glyphicon-time" style="font-size:50px; color: white; "></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#aantalStappenScreen" class="glyphicon glyphicon-user" style="font-size:50px; color: white;"></a>
+                </div>
+                <div class="flex-item">
+                    <a href="#instellingenScreen" class="glyphicon glyphicon-cog" style="font-size:50px; color: white;"></a>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <!-- ################   LOCATIONSERVICE SCREEN    ################ -->
     <div data-role="page" id="locationScreen">
@@ -215,11 +227,11 @@
             <div>
                 <input type="button" onclick="location.href='#btScreen';" value="Volgende stap" />
             </div>
-            <div data-role="footer" id="footer" style="margin-left:-16px;">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <a href="#" onclick="showGPSAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
-                    </div>
+        </div>
+        <div data-role="footer" id="footer">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#" onclick="showGPSAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
                 </div>
             </div>
         </div>
@@ -248,11 +260,11 @@
             <div>
                 <input type="button" onclick="location.href='#koppelMoxScreen';" value="Volgende stap" />
             </div>
-            <div data-role="footer" id="footer" style="margin-left:-16px;">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <a href="#" onclick="showBluetoothAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
-                    </div>
+        </div>
+        <div data-role="footer" id="footer">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#" onclick="showBluetoothAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
                 </div>
             </div>
         </div>
@@ -268,11 +280,11 @@
             <div>
                 <input type="button" onclick="location.href='#actieveMinutenScreen';" value="Afronden" />
             </div>
-            <div data-role="footer" id="footer" style="margin-left:-16px;">
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <a href="#" onclick="showMoxAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
-                    </div>
+        </div>
+        <div data-role="footer" id="footer">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <a href="#" onclick="showMoxAlert(); return false;" class="glyphicon glyphicon-question-sign" style="font-size:50px; color: white;"></a>
                 </div>
             </div>
         </div>
