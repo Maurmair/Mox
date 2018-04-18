@@ -1,6 +1,7 @@
 [data-role=page]{height: 100% !important; position:relative !important; text-align: center; }
 [data-role=header]{text-align:center;}
-[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center;} 
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%; text-align: center; padding-top: 5px } 
+
 #splash {
     color: white;
     text-align: center;     
