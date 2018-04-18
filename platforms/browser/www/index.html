@@ -16,7 +16,7 @@
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="./js/dates.js"></script>
     <script type="text/javascript" src="./js/getData.js"></script>
-    
+
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
@@ -58,7 +58,9 @@
             <div id="toonBehaaldeActieveMinuten">....</div>
             <div id="slasher">/</div>
             <div id="toonDoelActieveMinuten">....</div>
+            <progress id="progressActiveMinutes"></progress>
         </div>
+        
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
             <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
@@ -81,6 +83,10 @@
             <div id="toonBehaaldeStappen">....</div>
             <div id="slasher">/</div>
             <div id="toonDoelStappen">....</div>
+            <progress id="progressSteps"></progress>
+        </div>
+        <div class="container">
+
         </div>
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -299,6 +305,8 @@
     <script type="text/javascript" src="./js/nd2settings.js"></script>
     <script type="text/javascript" src="./js/inputData.js"></script>
     <script type="text/javascript" src="./js/handleSettingsScreen.js"></script>
+    <script type="text/javascript" src="./js/updateProgress.js"></script>
+
     <!-- <script src="./js/startup.js"></script> -->
 
 </body>

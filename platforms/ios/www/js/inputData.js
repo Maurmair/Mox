@@ -13,12 +13,14 @@ function processRequest(e) {
             myInputData.StepsReached = responsee.StepsReached;
             document.getElementById("toonBehaaldeActieveMinuten").innerHTML = myInputData.ActiveMinutesReached;
             document.getElementById("toonBehaaldeStappen").innerHTML = myInputData.StepsReached;
+            updateProgressBar();  
         } else if (responsee == null) {
             myInputData.ActiveMinutesReached = 0;
             myInputData.StepsReached = 0;
             document.getElementById("toonBehaaldeActieveMinuten").innerHTML = myInputData.ActiveMinutesReached;
             document.getElementById("toonBehaaldeStappen").innerHTML = myInputData.StepsReached;
             updateOrSetInputData();
+            updateProgressBar();  
         }
     }
 }
@@ -33,4 +35,5 @@ function updateOrSetInputData() {
         success: function () {
         }
     });
+    updateProgressBar();  
 }
