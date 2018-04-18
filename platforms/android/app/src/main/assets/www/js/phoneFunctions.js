@@ -1,14 +1,26 @@
 var deviceId;
 var platform, osVersion;
+var uuid;
+
+var myTarget = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+    myTarget.Date = new Date().toISOString().slice(0, 10);
+    myTarget.DeviceId = device.uuid;
+    flikkerOp();
+    // uuid = new DeviceUUID().get();
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();
 
     //get device id
-    deviceId = device.uuid;
+    // deviceId = uuid;
 
     $('body').addClass(platform);
 

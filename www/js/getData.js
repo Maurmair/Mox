@@ -2,34 +2,36 @@ var requestToday = new XMLHttpRequest();
 var requestYesterday = new XMLHttpRequest();
 var dateYesterday = yesterday.toISOString().slice(0, 10);
 
-var myTarget = {
-    "Date": "",
-    "ActiveMinutes": null,
-    "Steps": null,
-    "DeviceId": ""
-}
+// var myTarget = {
+//     "Date": "",
+//     "ActiveMinutes": null,
+//     "Steps": null,
+//     "DeviceId": ""
+// }
 
-var todaysTarget = {
-    "Date": "",
-    "ActiveMinutes": null,
-    "Steps": null,
-    "DeviceId": ""
-}
+// var todaysTarget = {
+//     "Date": "",
+//     "ActiveMinutes": null,
+//     "Steps": null,
+//     "DeviceId": ""
+// }
 
 // deviceId = "SamsungS8Wesley";
-myTarget.DeviceId = deviceId;
+// myTarget.DeviceId = deviceId;
 
 // myTarget.DeviceId = "609569da5ee53f80";
-requestToday.addEventListener("readystatechange", processRequestToday, false);
-requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + dateToday + "&DeviceId=" + myTarget.DeviceId, true);
-requestToday.send();
-document.getElementById("uuidtest").innerHTML = deviceId;
-// console.log(device.uuid);
+function flikkerOp() {
+    requestToday.addEventListener("readystatechange", processRequestToday, false);
+    requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + myTarget.Date + "&DeviceId=" + myTarget.DeviceId, true);
+    requestToday.send();
+    document.getElementById("uuidtest").innerHTML = myTarget.DeviceId;
+    // console.log(device.uuid)
 
+    // makeTheCall();
 
-// makeTheCall();
+    var dateToday = new Date().toISOString().slice(0, 10);
+}
 
-var dateToday = new Date().toISOString().slice(0, 10);
 
 function processRequestToday(e) {
     if (requestToday.readyState == 4 && requestToday.status == 200) {
