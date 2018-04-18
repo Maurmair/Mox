@@ -10,6 +10,7 @@
 # Folders #
 ############
 platforms/master
+/platforms
 
 # Packages #
 ############

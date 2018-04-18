@@ -16,6 +16,7 @@
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="./js/dates.js"></script>
     <script type="text/javascript" src="./js/getData.js"></script>
+    <script type="text/javascript" src="./js/helpDialogs.js"></script>
 
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -51,20 +52,21 @@
             </h2>
         </div>
 
-        <div data-role="content">
-            <div id="testdeviceiddd"></div>
-            <p>Circle plaatsen met x van het doel behaald</p>
-            <p>Lampjes plaatsen voor % aanduiding</p>
-            <div id="toonBehaaldeActieveMinuten">....</div>
-            <div id="slasher">/</div>
-            <div id="toonDoelActieveMinuten">....</div>
-            <progress id="progressActiveMinutes"></progress>
+        <div data-role="content" id="content">
+            Hier kunt u uw dag voortgang zien.
+            U ziet rechts uw doel, en links het aantal gelopen minuten voor deze dag.
+            <br/>
+            <br/>
         </div>
-        
+        <div id="toonBehaaldeActieveMinuten">....</div>
+        <div id="slasher">/</div>
+        <div id="toonDoelActieveMinuten">....</div>
+        <progress id="progressActiveMinutes"></progress>
+
         <div data-role="footer" id="footer">
-            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
-            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right">Aantal stappen</a>
-            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right">Instellingen</a>
+            <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock{background-size: 75%;} ui-btn-icon-right"></a>
+            <a href="#aantalStappenScreen" class="ui-btn ui-icon-info ui-btn-icon-right"></a>
+            <a href="#instellingenScreen" class="ui-btn ui-icon-gear ui-btn-icon-right"></a>
         </div>
     </div>
 
@@ -78,8 +80,10 @@
 
         </div>
         <div data-role="content">
-            <p>Circle plaatsen met x van het doel behaald</p>
-            <p>Lampjes plaatsen voor % aanduiding</p>
+            <p>Hier kunt u uw dag voortgang zien.</p>
+            <p>U ziet rechts uw doel, en links het aantal gelopen stappen voor deze dag.</p>
+            <br/>
+            <br/>
             <div id="toonBehaaldeStappen">....</div>
             <div id="slasher">/</div>
             <div id="toonDoelStappen">....</div>
@@ -109,27 +113,29 @@
                     <b>Stel uw doel in:</b>
                 </p>
             </p>
-        </div>
-        <div id="uuidtest"></div>
-        Actieve minuten:
-        <form style="width: 100%;">
-            <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
-            <!-- <textarea rows="1" cols="10" disabled>50</textarea> -->
-            <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
-            <p>
-                <input class="textInputField" id="activeMinutesInput" type="number" value="">
-            </p>
-        </form>
-        <br/> Aantal stappen:
-        <form style="width: 100%;">
-            <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>
-            <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
+            <div id="uuidtest"></div>
+            <br/> Actieve minuten:
+            <form style="width: 100%;">
+                <button type="button" id="btnMinusMinutes" style="width:30%; float: left; margin-left:20%;">-</button>
+                <button type="button" id="btnPlusMinutes" style="width:30%; float: left;">+</button>
+                <br/>
+                <br/>
+                <p>
+                    <input type="textInputField" id="activeMinutesInput" type="number" value="">
+                </p>
+            </form>
+            <br/> Aantal stappen:
+            <form style="width: 100%;">
+                <button type="button" id="btnMinusSteps" style="width:30%; float: left; margin-left:20%;">-</button>
+                <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
+                <br/>
+                <br/>
+                <input type="textInputField" id="stepsInput" type="number" value="">
+            </form>
             <br/>
-            <input class="textInputField" id="stepsInput" type="number" value="">
-        </form>
-        <button id="pushToDB">Sla op</button>
-        <br/>
-        <br/>
+            <button id="pushToDB">Sla op</button>
+            <br/>
+        </div>
         <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
         <div data-role="footer" id="footer">
             <a href="#actieveMinutenScreen" class="ui-btn ui-icon-clock ui-btn-icon-right">Actieve minuten</a>
@@ -155,71 +161,43 @@
         <div data-role="header" id="header">
             <h2>LOCATIE</h2>
         </div>
+        <div data-role="content">
+            <div id="state">
+                <ul>
+                    <li class="location">
+                        <span class="name">Locatie</span>
+                        <span class="state on">Beschikbaar</span>
+                        <span class="state off">Niet beschikbaar</span>
+                    </li>
+                </ul>
+            </div>
 
-        <h2>State</h2>
+            <div class="settings">
 
-        <div id="state">
-            <h3>Location</h3>
-            <ul>
-                <li class="location">
-                    <span class="name">Location</span>
-                    <span class="state on">AVAILABLE</span>
-                    <span class="state off">UNAVAILABLE</span>
-                </li>
-                <li class="location-setting os-conditional android ios">
-                    <span class="name">Location setting</span>
-                    <span class="state on">ENABLED</span>
-                    <span class="state off">DISABLED</span>
-                </li>
-                <li class="gps-location android-only">
-                    <span class="name">GPS Location</span>
-                    <span class="state on">AVAILABLE</span>
-                    <span class="state off">UNAVAILABLE</span>
-                </li>
-                <li class="gps-location-setting android-only">
-                    <span class="name">GPS Location setting</span>
-                    <span class="state on">ENABLED</span>
-                    <span class="state off">DISABLED</span>
-                </li>
-                <li class="location-mode android-only">
-                    <span class="name">Location Mode</span>
-                    <span class="value"></span>
-                </li>
-                <li class="location-authorization os-conditional android ios">
-                    <span class="name">Location authorized</span>
-                    <span class="state on">AUTHORIZED</span>
-                    <span class="state off">UNAUTHORIZED</span>
-                </li>
-                <li class="location-authorization-status os-conditional android ios">
-                    <span class="name">Location authorization status</span>
-                    <span class="value"></span>
-                </li>
-            </ul>
-        </div>
+                <button id="location-settings" class="os-conditional android windows">Open Location settings</button>
+                <!-- MOET IN DE STARTUP KOMEN -->
+                <h3>Request permissions</h3>
+                <button id="request-location-always" class="ios-only request-location">Request Location Authorization Always</button>
+                <button id="request-location-in-use" class="ios-only request-location">Request Location Authorization When In Use</button>
+                <button id="request-location" class="android-only">Request Location Authorization</button>
+                <button id="request-bluetooth" class="ios-only">Request Bluetooth Authorization</button>
+                <button id="request-reminders" class="ios-only">Request Reminders Authorization</button>
+                <div id="request-remote-notifications" class="ios-only">
+                    <select multiple="multiple">
+                        <option value="alert">Alerts</option>
+                        <option value="sound">Sounds</option>
+                        <option value="badge">Badges</option>
+                    </select>
+                    <button>Request remote notifications</button>
+                </div>
+            </div>
 
-        <div class="settings">
-
-            <h3>Open settings</h3>
-            <button id="location-settings" class="os-conditional android windows">Open Location settings</button>
-            <!-- MOET IN DE STARTUP KOMEN -->
-            <!-- <h3>Request permissions</h3>
-            <button id="request-location-always" class="ios-only request-location">Request Location Authorization Always</button>
-            <button id="request-location-in-use" class="ios-only request-location">Request Location Authorization When In Use</button>
-            <button id="request-location" class="android-only">Request Location Authorization</button>
-            <button id="request-bluetooth" class="ios-only">Request Bluetooth Authorization</button>
-            <button id="request-reminders" class="ios-only">Request Reminders Authorization</button>
-            <div id="request-remote-notifications" class="ios-only">
-                <select multiple="multiple">
-                    <option value="alert">Alerts</option>
-                    <option value="sound">Sounds</option>
-                    <option value="badge">Badges</option>
-                </select>
-                <button>Request remote notifications</button>
-            </div> -->
-        </div>
-
-        <div>
-            <input type="button" onclick="location.href='#btScreen';" value="Volgende stap" />
+            <div>
+                <input type="button" onclick="location.href='#btScreen';" value="Volgende stap" />
+            </div>
+            <div data-role="footer" id="footer">
+                <a href="#" onclick="showGPSAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            </div>
         </div>
     </div>
 
@@ -228,75 +206,46 @@
         <div data-role="header" id="header">
             <h2>BLUETOOTH</h2>
         </div>
-        <h3>Bluetooth</h3>
+        <div data-role="content">
+            <div id="state">
+                <ul>
+                    <li class="bluetooth-available">
+                        <span class="name">Bluetooth</span>
+                        <span class="state on">Beschikbaar</span>
+                        <span class="state off">Niet beschikbaar</span>
+                    </li>
+                </ul>
+            </div>
 
-        <div id="state">
-            <ul>
-                <li class="bluetooth-support android-only">
-                    <span class="name">Bluetooth</span>
-                    <span class="state on">SUPPORTED</span>
-                    <span class="state off">UNSUPPORTED</span>
-                </li>
-                <li class="bluetooth-available">
-                    <span class="name">Bluetooth</span>
-                    <span class="state on">AVAILABLE</span>
-                    <span class="state off">UNAVAILABLE</span>
-                </li>
-                <li class="bluetooth-setting android-only">
-                    <span class="name">Bluetooth setting</span>
-                    <span class="state on">ENABLED</span>
-                    <span class="state off">DISABLED</span>
-                </li>
-                <li class="bluetooth-state os-conditional android ios">
-                    <span class="name">Bluetooth state</span>
-                    <span class="value"></span>
-                </li>
-                <li class="bluetooth-le-support android-only">
-                    <span class="name">Bluetooth Low Energy (LE)</span>
-                    <span class="state on">SUPPORTED</span>
-                    <span class="state off">UNSUPPORTED</span>
-                </li>
-                <li class="bluetooth-le-peripheral-support android-only">
-                    <span class="name">Bluetooth LE Peripheral Mode</span>
-                    <span class="state on">SUPPORTED</span>
-                    <span class="state off">UNSUPPORTED</span>
-                </li>
-            </ul>
-        </div>
+            <div class="settings">
+                <button id="enable-bluetooth" class="os-conditional android windows">Zet Bluetooth aan</button>
+            </div>
 
-        <div class="settings">
-            <h3>Use permissions</h3>
-            <button id="enable-bluetooth" class="os-conditional android windows">Enable Bluetooth</button>
-        </div>
-
-        <div>
-            <input type="button" onclick="location.href='#koppelMoxScreen';" value="Volgende stap" />
+            <div>
+                <input type="button" onclick="location.href='#koppelMoxScreen';" value="Volgende stap" />
+            </div>
+            <div data-role="footer" id="footer">
+                <a href="#" onclick="showBluetoothAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            </div>
         </div>
     </div>
 
 
     <!-- ################   KOPPELEN MOX SCREEN    ################ -->
-    <!-- ################   TODO:                  ################ -->
-    <!-- ################   * Bevestiging laten    ################ -->
-    <!-- ################     wanneer er gekoppeld ################ -->
-    <!-- ################     is                   ################ -->
     <div data-role="page" id="koppelMoxScreen">
         <div data-role="header" id="header">
             <h2>Selecteer mox:</h2>
         </div>
-        <input type="button" onclick="location.href='#actieveMinutenScreen';" value="Afronden" />
+        <div data-role="content">
+            <div>
+                <input type="button" onclick="location.href='#actieveMinutenScreen';" value="Afronden" />
+            </div>
+            <div data-role="footer" id="footer">
+                <a href="#" onclick="showMoxAlert(); return false;" class="ui-btn ui-icon-info ui-btn-icon-right">Help</a>
+            </div>
+        </div>
     </div>
-    <script>
-        var deviceUuid = "";
-        window.onload = function () {
-            if (document.readyState === "complete") {
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
-        }
-        function onDeviceReady() {
-            deviceUuid = device.uuid;
-        }
-    </script>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

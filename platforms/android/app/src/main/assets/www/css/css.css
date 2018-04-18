@@ -28,9 +28,15 @@
     text-align: center;    
 }
 
+#content{
+    font-size: 24px;
+    background-color: #476aa3;
+}
+
 #footer{
     width:100%;
     color:white; background-color: #476aa3;
+    background-size: 75%;
 }
 
 .ui-header .ui-title{
