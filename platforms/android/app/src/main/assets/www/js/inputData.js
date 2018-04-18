@@ -6,7 +6,7 @@ var myInputData = {
     "DeviceId": ""
 }
 
-myInputData.DeviceId = "GVD";
+myInputData.DeviceId = "609569da5ee53f80";
 // myInputData.DeviceId = device.uuid;
 
 
