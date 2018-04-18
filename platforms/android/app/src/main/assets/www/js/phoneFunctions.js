@@ -9,12 +9,22 @@ var myTarget = {
     "DeviceId": ""
 }
 
+var myInputData = {
+    "Date": "",
+    "ActiveMinutes": null,
+    "Steps": null,
+    "DeviceId": ""
+}
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     myTarget.Date = new Date().toISOString().slice(0, 10);
     myTarget.DeviceId = device.uuid;
-    flikkerOp();
+    myInputData.Date = new Date().toISOString().slice(0, 10);
+    myInputData.DeviceId = device.uuid;
+    getTarget();
+    getInputData();
     // uuid = new DeviceUUID().get();
     osVersion = parseFloat(device.version);
     platform = device.platform.toLowerCase();

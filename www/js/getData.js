@@ -20,7 +20,7 @@ var dateYesterday = yesterday.toISOString().slice(0, 10);
 // myTarget.DeviceId = deviceId;
 
 // myTarget.DeviceId = "609569da5ee53f80";
-function flikkerOp() {
+function getTarget() {
     requestToday.addEventListener("readystatechange", processRequestToday, false);
     requestToday.open('GET', "http://moxwebservice.azurewebsites.net/api/Target?Id=" + myTarget.Date + "&DeviceId=" + myTarget.DeviceId, true);
     requestToday.send();
