@@ -51,6 +51,10 @@
     width: 80%;
     margin: auto;
 }
+/* 
+.textInputField{
+    text-align: center; width:100%; box-shadow:1px 1px grey; border: 1px solid lightgrey; margin-top:5px;
+} */
 
 #stepsInput, #activeMinutesInput{
     width: 80%;
@@ -168,6 +172,10 @@ li.on span.on{
 #request-remote-notifications *{
     text-align: center;
 }
+
+/* .android-only, .waves-effect, .waves-button, .ui-btn, .ui-shadow, .ui-corner-all{
+    content: none;
+} */
 
 #toonBehaaldeActieveMinuten, #slasher, #toonDoelActieveMinuten, #toonBehaaldeStappen {
     width: 20%; float: left;

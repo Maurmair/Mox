@@ -282,22 +282,6 @@ module.exports = [
     "merges": [
       "cordova.plugins.diagnostic.external_storage"
     ]
-  },
-  {
-    "id": "cordova-plugin-dialogs.notification",
-    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
-  },
-  {
-    "id": "cordova-plugin-dialogs.notification_android",
-    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -307,8 +291,7 @@ module.exports.metadata =
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-geolocation": "4.0.1",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova.plugins.diagnostic": "4.0.5",
-  "cordova-plugin-dialogs": "2.0.1"
+  "cordova.plugins.diagnostic": "4.0.5"
 };
 // BOTTOM OF METADATA
 });
