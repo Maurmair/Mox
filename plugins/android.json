@@ -7,19 +7,19 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova.plugins.diagnostic": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova.plugins.diagnostic": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },

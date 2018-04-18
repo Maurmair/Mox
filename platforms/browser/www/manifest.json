@@ -5,7 +5,7 @@
   "short_name": "MOX",
   "version": "com.phonegap.helloworld",
   "description": "MOX - Bewegen houdt je fit",
-  "author": "Jordi Hutjens, Wesley Maurmair",
+  "author": "Wesley Maurmair, Mr. Jordi Hutjens",
   "icons": [],
   "start_url": "index.html"
 }
