@@ -59,8 +59,10 @@
             <div id="toonDoelActieveMinuten">....</div>
             <progress id="progressActiveMinutes"></progress>
         </div>
+
         <button type="button" id="simulateMinusMinutes" style="width:30%; float: left; margin-left:5%;">-</button>
         <button type="button" id="simulatePlusMinutes" style="width:30%; float: right; margin-right:5%;">+</button>
+        
         <div data-role="footer" id="footer">
             <div class="flex-container">
                 <div class="flex-item">
@@ -135,7 +137,7 @@
                 <br/>
                 <br/>
                 <p>
-                    <input type="textInputField" id="activeMinutesInput" type="number" value="">
+                    <input style="color:black;"type="textInputField" id="activeMinutesInput" type="number" value="">
                 </p>
             </form>
             <br/> Aantal stappen:
@@ -144,13 +146,13 @@
                 <button type="button" id="btnPlusSteps" style="width:30%; float: left;">+</button>
                 <br/>
                 <br/>
-                <input type="textInputField" id="stepsInput" type="number" value="">
+                <input style="color:black;" type="textInputField" id="stepsInput" type="number" value="">
             </form>
             <br/>
             <button id="pushToDB">Sla op</button>
             <br/>
             <input type="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
-        </div>        
+        </div>
         <div data-role="footer" id="footer">
             <div class="flex-container">
                 <div class="flex-item">
