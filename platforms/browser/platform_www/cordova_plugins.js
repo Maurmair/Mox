@@ -15,6 +15,22 @@ module.exports = [
         "runs": true
     },
     {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/browser/notification.js",
+        "id": "cordova-plugin-dialogs.notification_browser",
+        "pluginId": "cordova-plugin-dialogs",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "pluginId": "cordova-plugin-file",
@@ -197,11 +213,12 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova.plugins.diagnostic": "4.0.5",
     "cordova-plugin-device": "2.0.1",
-    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-dialogs": "2.0.1",
+    "cordova-plugin-file": "6.0.1",
     "cordova-plugin-geolocation": "4.0.1",
-    "cordova-plugin-file": "6.0.1"
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova.plugins.diagnostic": "4.0.5"
 }
 // BOTTOM OF METADATA
 });
