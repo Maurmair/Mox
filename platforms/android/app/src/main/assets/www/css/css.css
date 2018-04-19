@@ -1,4 +1,4 @@
-[data-role=page]{height: 100% !important; position:relative !important; text-align: center; background: linear-gradient(#3dc2bf,#178fbd); }
+[data-role=page]{height: 100% !important; position:relative !important; text-align: center; background:radial-gradient(circle,#729ee5, #476aa3); }
 [data-role=header]{text-align:center;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100% !important; text-align: center !important; padding-top: 5px;} 
 
@@ -16,7 +16,7 @@
 }
 
 #content{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #footer{
@@ -33,6 +33,55 @@
     color: white;
 }
 
+button.Moxbtn.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+button#btnPlusMinutes.ui-btn.ui-shadow.ui-corner-all
+{
+    background-color:#1cc1ff;
+}
+
+button#btnMinusMinutes.ui-btn.ui-shadow.ui-corner-all
+{
+    background-color:#1cc1ff;
+}
+
+button#btnMinusSteps.ui-btn.ui-shadow.ui-corner-all
+{
+    background-color:#1cc1ff;
+}
+
+button#btnPlusSteps.ui-btn.ui-shadow.ui-corner-all
+{
+    background-color:#1cc1ff;
+}
+
+button#pushToDB.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+button#simulateMinusMinutes.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+button#simulatePlusMinutes.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+button#simulateMinusSteps.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+button#simulatePlusSteps.ui-btn.ui-shadow.ui-corner-all{
+    background-color:#1cc1ff;
+}
+
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+    color:transparent;
+    border-color: transparent;
+}
+
 .ui-input-text:after, .ui-body-inherit:after, .ui-corner-all:after, .ui-shadow-inset:after{
     content: none;
     text-align: center;
@@ -42,7 +91,6 @@
     width: 80%;
     margin: auto;
 }
-
 
 #stepsInput, #activeMinutesInput{
     width: 80%;
@@ -97,10 +145,10 @@ li span.value{
     padding: 2px;
 }
 li span.on{
-    background-color: green;
+    color: green;
 }
 li span.off{
-    background-color: red;
+    color: red;
 }
 
 li span.on,
@@ -114,7 +162,6 @@ li.on span.on{
 }
 
 .settings{
-    border-top: 1px solid #000;
     margin-top: 24px;
     padding-top: 24px;
     width: 100%;
