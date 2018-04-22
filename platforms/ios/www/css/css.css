@@ -225,3 +225,7 @@ progress[value] {
   .flex-item {
      margin: auto;
   }
+
+.button_white{
+    background: white;
+}

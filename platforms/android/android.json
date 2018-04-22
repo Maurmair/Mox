@@ -10,59 +10,59 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
-                            "count": 6
+                            "count": 5
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 6
+                            "count": 5
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
-                            "count": 6
+                            "count": 5
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
-                            "count": 6
+                            "count": 5
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_LOCATION_EXTRA_COMMANDS\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",

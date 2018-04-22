@@ -38,7 +38,7 @@
 
         <script>              
             $(function () { setTimeout(hideSplash, 2000); });
-            function hideSplash() { $.mobile.changePage("#instellingenScreen", "fade"); }
+            function hideSplash() { $.mobile.changePage("#actieveMinutenScreen", "fade"); }
         </script>
     </div>
 
@@ -124,7 +124,7 @@
         </div>
         <div data-role="content" id="content">
             <div> Stel uw doel in</div>
-            <!-- <div id="uuidtest"></div> -->
+            <div id="uuidtest"></div>
             <br/>
             <div>Actieve minuten:</div>
             <form style="width: 100%;">
@@ -146,7 +146,8 @@
             </form>
             <br/>
             <button id="pushToDB" style="margin-bottom: 10px">Sla op</button>
-            <input type="button" class="button" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
+
+            <input type="button" class="button_white" onclick="location.href='#initScreen';" value="Stel opnieuw in" />
         </div>
         <div data-role="footer" id="footer">
             <div class="flex-container">
@@ -212,10 +213,9 @@
             </div>
 
             <div class="settings">
-
                 <button id="location-settings" class="os-conditional android windows">Open Locatie instellingen</button>
                 <!-- MOET IN DE STARTUP KOMEN -->
-                <!-- <button id="request-location-always" class="ios-only request-location">Request Location Authorization Always</button>
+                <button id="request-location-always" class="ios-only request-location">Request Location Authorization Always</button>
                 <button id="request-location-in-use" class="ios-only request-location">Request Location Authorization When In Use</button>
                 <button id="request-location" class="android-only">Request Location Authorization</button>
                 <button id="request-bluetooth" class="ios-only">Request Bluetooth Authorization</button>
@@ -227,7 +227,7 @@
                         <option value="badge">Badges</option>
                     </select>
                     <button>Request remote notifications</button>
-                </div> -->
+                </div>
             </div>
 
             <div>
